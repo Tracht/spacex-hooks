@@ -1,16 +1,30 @@
 import React from 'react';
+import Headline from './Headline.js';
 import './App.css';
 
 function App() {
+
+  const title = 'SpaceX';
+  const quote = 'The first step is to establish that something is possible; then probability will occur.';
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Headline 
+          title={title} 
+          quote={quote}
+        />
       </header>
     </div>
   );
 }
+
+// function Headline({title, quote}) {
+//   return <div> 
+//     <h1> {title} </h1>
+//     <p> {quote} </p>
+//     </div>
+
+// }
 
 export default App;
