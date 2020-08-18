@@ -7,9 +7,11 @@ Build a React app with the functionality that meets the following requirements:
 * You have complete freedom over what the UI looks like
 
 ### TechStack 
-- [React](https://github.com/facebook/create-react-app)
+- [React](https://github.com/facebook/create-react-app) using functional components
 - [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
-- This project takes a functional components approach. 
+- [Axios](https://github.com/axios/axios), a Javascript library used to make HTTP requests from node.js
+- [Jest](https://jestjs.io) for unit tests of logic and components
+- [Cypress](https://www.cypress.io) for end-to-end testing
 
 ### Installation Guide 
 - Clone or Fork the project repo
