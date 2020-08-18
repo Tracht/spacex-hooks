@@ -1,5 +1,6 @@
 import React from 'react';
 import Headline from './Headline.js';
+import Main from './Main.js';
 import './App.css';
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
       <header className="App-header">
         <Headline />
       </header>
+      <body>
+        <Main />
+      </body>
+      
     </div>
   );
 }
