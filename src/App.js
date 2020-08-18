@@ -4,16 +4,10 @@ import './App.css';
 
 function App() {
 
-  const title = 'SpaceX';
-  const quote = 'The first step is to establish that something is possible; then probability will occur.';
-
   return (
     <div className="App">
       <header className="App-header">
-        <Headline 
-          title={title} 
-          quote={quote}
-        />
+        <Headline />
       </header>
     </div>
   );
