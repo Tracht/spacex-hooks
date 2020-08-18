@@ -10,8 +10,7 @@ const Main = () => {
    // const [query, setQuery] = useState('dragons')
   const [loading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false);
-  const [data, setData] = useState({ spacex: [] });
- 
+  const [data, setData] = useState({ hits: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,9 +18,9 @@ const Main = () => {
       setIsLoading(true);
       
       try {
-        const result = await axios(
+        const result = await axios.get(
           // `${url}+${query}`, 
-          'https://api.spacexdata.com/v3/dragons',
+          'https://api.spacexdata.com/v3/dragons/',
         );
         setData(result.data);
         console.log("help", result.data)
@@ -35,7 +34,7 @@ const Main = () => {
     };
 
     fetchData();
-  }, [setData], console.log("emergency",data));
+  }, [setData], console.log("emergency", data));
  
 
   return(
