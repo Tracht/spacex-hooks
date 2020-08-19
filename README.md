@@ -10,6 +10,7 @@ Build a React app with the functionality that meets the following requirements:
 - [React](https://github.com/facebook/create-react-app) using functional components
 - [Axios](https://github.com/axios/axios) to make HTTP requests from node.js
 - [Jest](https://jestjs.io) for unit tests of logic and components
+- [Jest for styled components](https://github.com/styled-components/jest-styled-components)
 
 ### Installation Guide 
 - Clone or Fork the project repo
