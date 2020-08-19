@@ -1,64 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-// import './Main.css';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const Main = () => {
-
-  // const [url, setUrl] = useState(
-  //   'https://api.spacexdata.com/v3/dragons',
-  // );
-   // const [query, setQuery] = useState('dragons')
-  const [loading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false);
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsError(false);
-      setIsLoading(true);
-      
-      try {
-        const result = await axios.get(
-          // `${url}+${query}`, 
-          'https://api.spacexdata.com/v3/dragons/',
-        );
-        setData(result.data);
-        console.log("help", result.data)
-      }
-
-      catch (error) {
-        setIsError(true);
-      } 
-
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, [setData], console.log("emergency", data));
- 
+  useEffect( () => {
+    axios.get('https://api.spacexdata.com/v3/dragons/')
+      .then((response) => {
+        console.log('succesful api request', response.data)
+        setData(response.data)
+      })
+      .catch((error) => {
+        console.log('error with the request', error)
+        setIsError(true)
+      })
+  }, []);
 
   return(
+    <div>
+      { isError && <p> Error fetching content </p> } 
+      { data ? null : (<div> Data Loading </div>)}
+      { data && 
         <div>
-          
-          { loading && <p> Content Loading </p> } 
-
-          { isError && <p> Error fetching content </p> } 
-
-          { !loading && 
-            <div>
-              {console.log("Whats in here?", data.hits)}
-
-              {data.hits.map(item => (
-                <p key={item.objectID}>
-                  <a href={item.url}>{item.title}</a>
-                </p>
-              ))}
-            </div>
-          }
-    
+            {console.log("Whats in here?", data)}
+            {data.map(item => (
+              <p key={item.id}>
+                <a href={item.wikipedia}>{item.name}</a>
+              </p>
+            ))}
         </div>
+      }
+    </div>
   );
-
 }
-
-export default Main;
+export default Main
