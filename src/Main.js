@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import ItemList from './ItemList';
 
 const Main = () => {
   const [isError, setIsError] = useState(false);
@@ -19,18 +20,7 @@ const Main = () => {
 
   return(
     <div>
-      { isError && <p> Error fetching content </p> } 
-      { data ? null : (<div> Data Loading </div>)}
-      { data && 
-        <div>
-            {console.log("Whats in here?", data)}
-            {data.map(item => (
-              <p key={item.id}>
-                <a href={item.wikipedia}>{item.name}</a>
-              </p>
-            ))}
-        </div>
-      }
+      <ItemList data={data} isError={isError} />
     </div>
   );
 }
