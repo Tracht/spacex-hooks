@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ItemList from './ItemList';
 
 const Main = () => {
@@ -7,7 +7,7 @@ const Main = () => {
   const [data, setData] = useState(null);
 
   useEffect( () => {
-    axios.get('https://api.spacexdata.com/v3/dragons/')
+    axios.get('https://api.spacexdata.com/v3/rockets/')
       .then((response) => {
         console.log('succesful api request', response.data)
         setData(response.data)
