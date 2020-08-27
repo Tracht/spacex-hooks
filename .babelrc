@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "babel-plugin-styled-components", 
+    "styled-components",
+    [
+      "module resolver",
+      {
+        "root": [
+          "./src/StyledComponents"
+        ],
+        "alias": {
+          "components": "components"
+        }
+      }
+    ]
+  ],
+  
+  "presets": ["babel"]
+}

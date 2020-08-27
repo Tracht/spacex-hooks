@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <Headline />
       </header>
-      <body>
+      <body className="App-body">
         <Main />
       </body>
       

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Headline.css';
+import Button from './StyledComponents/Button';
+import Image from './StyledComponents/Image';
 
 const QUOTES = ([
   'You can either watch it happen or be a part of it.',
@@ -14,10 +15,12 @@ const Headline = () => {
   const [quote, setQuote] = useState(QUOTES[0]);
 
   useEffect(() => {}, []); // runs on first mount -> because of empty array
-  
   useEffect(() => {       // runs on mount & update
-    counter >= 3 ? counter = 0 && setQuote(QUOTES[counter]) : setQuote(QUOTES[counter]);
-  });
+    if (counter >= 3) { setQuote(QUOTES[counter]) } else {
+      counter = 0;
+      setQuote(QUOTES[counter]) 
+    }
+  }, []);
 
   function nextQuote() {
     counter += 1;
@@ -26,13 +29,9 @@ const Headline = () => {
   
   return (
     <div> 
-      <h1> SpaceX </h1>
+      <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
       <p> {quote} </p>
-      <button className="headline-button" 
-        onClick={nextQuote} 
-      > 
-        next
-      </button>
+      <Button onClick={nextQuote}> next </Button>
     </div>
   )
 
