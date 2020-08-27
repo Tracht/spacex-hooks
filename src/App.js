@@ -1,6 +1,6 @@
 import React from 'react';
-import Headline from './Headline.js';
-import Main from './Main.js';
+import Headline from './Headline/Headline.js';
+import Main from './Main/Main.js';
 import './App.css';
 
 function App() {
