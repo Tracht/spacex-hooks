@@ -24,4 +24,4 @@ function ItemSummaryData(props) {
   
 };
 
-default export ItemSummaryData;
+export default ItemSummaryData;
