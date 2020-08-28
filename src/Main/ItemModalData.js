@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardTitle, CardText} from 'Card';
+import {CardTitle, CardText} from './../StyledComponents/Card';
 
 function ItemModalDetail(props) {
   const { data } = props

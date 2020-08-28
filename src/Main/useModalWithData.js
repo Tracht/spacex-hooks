@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import useState from 'react';
 import useModal from './useModal';
 
-export const useModalWithData = (
+const useModalWithData = (
   initialMode = false,
   initialSelected = null
 ) => {
@@ -13,5 +13,7 @@ export const useModalWithData = (
       setSelected(null)
     }
   }
-  return { modalOpen, setModalOpen, selected, setSelected, setModalState }
-}
+  return { modalOpen, setModalOpen, selected, setSelected, setModalState };
+};
+
+export default useModalWithData; 

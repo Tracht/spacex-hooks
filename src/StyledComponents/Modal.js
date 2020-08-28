@@ -8,7 +8,6 @@ export const Modal = styled.div`
   z-index: 1050;
   display: flex;
   align-items: baseline; 
-
 `;
 
 export const ModalContent = styled.div`
@@ -24,14 +23,12 @@ export const ModalContent = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
   background: white; 
   border: 0.5px solid #E8E8E8;
-
 `;
 
 export const ModalTitle = styled.div`
   font-family: Helvetica, sans-serif;
   text-align: left;
   color: yellowgreen;
-  
 `;
 
 export const ModalBackground = styled.div`
@@ -39,5 +36,4 @@ export const ModalBackground = styled.div`
   height: 100vw; 
   z-index: 0;
   background: rgba(0, 0, 0, 0.5);
-  
 `;
