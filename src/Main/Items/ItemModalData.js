@@ -1,7 +1,7 @@
 import React from 'react';
-import {CardTitle, CardText} from './../StyledComponents/Card';
+import { CardTitle, CardText } from '../../StyledComponents/Card';
 
-function ItemModalDetail(props) {
+function ItemModalData(props) {
   const { data } = props
   if (!data) return null
 
@@ -33,4 +33,4 @@ function ItemModalDetail(props) {
   )
 }
 
-export default ItemModalDetail;
+export default ItemModalData;

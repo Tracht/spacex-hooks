@@ -1,21 +1,18 @@
 import React from 'react';
-import { CardWrapper, CardTitle, CardText, CardLink } from './../StyledComponents/Card';
-import Button from './../StyledComponents/Button';
+import { CardWrapper, CardTitle, CardText, CardLink, CardsContainer } from '../../StyledComponents/Card';
+import Button from '../../StyledComponents/Button';
 
-function ItemListSummaryData(props) {
+function ItemsAll(props) {
 
   const { data, isError, setSelected, setModalState } = props
   return(
     <div>
-      {console.log("Data?", data)}
-      {console.log("Error?", isError)}
-
       { isError && <p> Error fetching content </p> } 
-      { data ? null : (<div> Data Loading </div>)}
+      { data ? null : (<div> Data Loading </div>) }
       { data && 
-        <div>
+        <CardsContainer>
             {data.map(item => (
-              <CardWrapper key={item.id}>
+              <CardWrapper key={item.id} class="item">
                 <CardTitle> { item.name } { item.rocket_name } </CardTitle>
                 <CardText> { item.description ? item.description : null } </CardText>
                 <CardLink href={ item.wikipedia }> Wiki </CardLink>
@@ -25,10 +22,10 @@ function ItemListSummaryData(props) {
               </CardWrapper>
               ))
             }
-        </div>
+       </CardsContainer>
       }
     </div>
   );
 };
 
-export default ItemListSummaryData;
+export default ItemsAll;

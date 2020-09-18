@@ -1,0 +1,15 @@
+.container {
+  background: gray;
+  width: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+.item {
+  background: blue;
+  width: auto;
+  height: auto;
+  margin: 4px;
+  flex: 1;
+  flex-basis: 20%;
+}
