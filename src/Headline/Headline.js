@@ -42,7 +42,7 @@ const Headline = () => {
       <HeadlineStyle>
         <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
           <p> {quote} </p>
-        <Button onClick={nextQuote}> next </Button>
+        <Button onClick={nextQuote} > next </Button>
       </HeadlineStyle>
   )
 

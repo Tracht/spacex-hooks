@@ -8,6 +8,7 @@ import Button from '../StyledComponents/Button';
 const AppStyle = styled.div`
   text-align: center;
   font-family: Helvetica, sans-serif;
+  /* background-color: #282c34; */
 `
 
 // component

@@ -16,7 +16,7 @@ function ItemsAll(props) {
                 <CardTitle> { item.name } { item.rocket_name } </CardTitle>
                 <CardText> { item.description ? item.description : null } </CardText>
                 <CardLink href={ item.wikipedia }> Wiki </CardLink>
-                <Button onClick={()=>{ setSelected(item.id); setModalState(true) }}> 
+                <Button onClick={()=>{ setSelected(item.id); setModalState(true) }} > 
                   Learn more 
                 </Button>
               </CardWrapper>
