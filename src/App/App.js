@@ -9,37 +9,31 @@ const AppStyle = styled.div`
   text-align: center;
   font-family: Helvetica, sans-serif;
 `
+
 // component
 const App = () => {
 
-  const [showHomepage, setHomePage] = useState(true);
+  const [showHomePage, setHomePage] = useState(true);
 
   const toggleHomePage = () => {
-    return setHomePage(false);
+    return setHomePage(!showHomePage); 
   }
 
-  if ( showHomepage === true ) {
-    return(
-      <AppStyle> 
-        <Headline />
-        <Button onClick={toggleHomePage} > Explore our inventory</Button>
-      </AppStyle>
-    ); 
-  } else {
+    if ( showHomePage === true ) {
       return(
         <AppStyle> 
-          <Main />
-          <Button onClick={toggleHomePage} > Go to homepage </Button>
+          <Button onClick={toggleHomePage} pink > Explore our inventory</Button>
+          <Headline /> 
         </AppStyle>
-      );
-    }
-
-  // return(
-  //   <AppStyle> 
-  //     <Headline />
-  //     <Main />
-  //   </AppStyle>
-  // );
+      );  
+    } else {
+        return(
+          <AppStyle> 
+            <Button onClick={toggleHomePage} pink > Go to homepage </Button>
+            <Main />
+          </AppStyle>
+        );
+      }
 }
 
 export default App;
