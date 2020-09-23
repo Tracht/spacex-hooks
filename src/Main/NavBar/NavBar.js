@@ -1,31 +1,23 @@
 import React from 'react';
 import Button from '../../StyledComponents/Button';
-// import styled from 'styled-components';
 
-// const NavDiv = styled.div`
-//   background-color: #282c34;
-//   /* min-height: 20vh; */
-//   display: flex;
-//   align-items: left;
-//   justify-content: top;
-//   color: white;
-// `
+const NavBar = ( {inventory, handleSelection} ) => {
 
-const NavBar = ( {inventoryOptions, userSelectionHandler} ) => {
-    return(
+  return(
     <ul>
-      {inventoryOptions.map(option => (
+      {inventory.map(option => (
           <Button 
             key={option} 
             value={option} 
-            onClick={userSelectionHandler} 
+            onClick={handleSelection(option)} 
             pink 
           >
             {option}  
           </Button>
         ))
       }
-    </ul>)
+    </ul>
+  )
 }
 
 export default NavBar

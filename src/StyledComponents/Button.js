@@ -6,12 +6,12 @@ export default styled.button`
   padding: 0.5rem 0;
   margin: 0.5rem 0.5rem;
   width: 9rem;
-  background: ${props => props.pink ? "palevioletred" : "transparent"};
-  color: ${props => props.pink ? "white" : "white"};
-  border: ${props => props.pink ? "2px solid palevioletred" : "2px solid white"};
+  background: ${props => props.green ? "#00cc99" : "transparent"}; 
+  color: ${props => props.green ? "white" : "white"};
+  border: ${props => props.green ? "2px solid #00cc99" : "2px solid white"};
 
   &:hover{
-    border: ${props => props.pink ? "2px solid palevioletred" : "2px solid white"};
+    border: ${props => props.green ? "2px solid #00cc99" : "2px solid white"};
     
   }
 

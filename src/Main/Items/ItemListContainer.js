@@ -7,7 +7,6 @@ const ItemListContainer = props => {
   return(
     <div>
       <ItemModalData ></ItemModalData> 
-
       <ItemsAll data={props.data}> </ItemsAll>
     </div>
   );

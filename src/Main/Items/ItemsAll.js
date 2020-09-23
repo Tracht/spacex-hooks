@@ -12,11 +12,25 @@ function ItemsAll(props) {
       { data && 
         <CardsContainer>
             {data.map(item => (
-              <CardWrapper key={item.id} class="item">
-                <CardTitle> { item.name } { item.rocket_name } </CardTitle>
-                <CardText> { item.description ? item.description : null } </CardText>
-                <CardLink href={ item.wikipedia }> Wiki </CardLink>
-                <Button onClick={()=>{ setSelected(item.id); setModalState(true) }} > 
+              <CardWrapper key={ item.id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name } class="item">
+                <CardTitle> 
+                  { item.name } 
+                  { item.rocket_name } 
+                  { item.capsule_serial }
+                  { item.core_serial }
+                  { item.mission_name }
+                  { item.ship_name }
+                </CardTitle>
+                <CardText> 
+                  { item.description ? item.description.substring(0,200) : null } 
+                  { item.details ? item.details.substring(0,200) : null } 
+                </CardText>
+                <CardLink href={ item.wikipedia | item.url }> 
+                  { item.wikipedia | item.url ? `website` : null  } 
+                </CardLink>
+                <Button 
+                  onClick={()=>{ setSelected(item.id); setModalState(true) }} 
+                > 
                   Learn more 
                 </Button>
               </CardWrapper>
