@@ -26,12 +26,7 @@ const Main = () => {
 
   return(
     <div>
-    <MainDiv>
-     {/* <NavBar
-        inventory={inventory} 
-        handleSelection={handleSelection} 
-      /> */}
-
+    <MainDiv small >
       <ul>  
         {inventory.map(option => (
             <Button 
@@ -45,7 +40,12 @@ const Main = () => {
           ))
         }
       </ul>
-
+    </MainDiv>  
+    <MainDiv>
+     {/* <NavBar
+        inventory={inventory} 
+        handleSelection={handleSelection} 
+      /> */}
       <ItemListContainer data={data} isError={isError} />
     </MainDiv>
     </div>
@@ -56,7 +56,7 @@ export default Main;
 // styled component 
 const MainDiv = styled.div`
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: ${props => props.small ? "20" : "100"};;
   display: flex;
   align-items: center;
   justify-content: center;

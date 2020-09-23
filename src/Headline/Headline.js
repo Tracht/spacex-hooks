@@ -15,7 +15,6 @@ const HeadlineStyle = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
 `
-
 // variables
 let counter = 0;
 
@@ -24,15 +23,13 @@ const Headline = () => {
 
   const [quote, setQuote] = useState(QUOTES[0]);
 
-  useEffect(() => {}, []); // runs on first mount -> because of empty array
-
   useEffect(() => {       // runs on mount & update
-      if (counter >= 3) { setQuote(QUOTES[counter]) } 
+      if (counter <= 3 ) { setQuote(QUOTES[counter]) } 
       else {
         counter = 0;
         setQuote(QUOTES[counter]) 
       }
-  }, []);
+  }, [quote]);
 
   function nextQuote() {
     counter += 1; setQuote(QUOTES[counter]);
@@ -42,7 +39,7 @@ const Headline = () => {
       <HeadlineStyle>
         <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
           <p> {quote} </p>
-        <Button onClick={nextQuote} > next </Button>
+        <Button onClick={nextQuote} > summon wisdom </Button>
       </HeadlineStyle>
   )
 

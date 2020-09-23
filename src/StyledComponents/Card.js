@@ -35,8 +35,8 @@ export const CardWrapper = styled.section`
   flex: 1;
   flex-basis: 20%;
   
-  background: ${ props => props.green ? "#00cc99" : "transparent" };;
-  color: ${ props => props.green ? "white" : "white" };;
+  background: ${ props => props.green ? "#00cc99" : "transparent" };
+  color: ${ props => props.green ? "white" : "white" };
   border: 2px solid white;
 `; 
 
