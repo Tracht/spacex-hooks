@@ -31,7 +31,7 @@ const Headline = () => {
       }
   }, [quote]);
 
-  function nextQuote() {
+  const nextQuote = () => {
     counter += 1; setQuote(QUOTES[counter]);
   };
     

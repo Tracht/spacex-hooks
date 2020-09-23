@@ -8,7 +8,7 @@ function ItemsAll(props) {
   return(
     <div>
       { isError && <p> Error fetching content </p> } 
-      { data ? null : (<div> Data Loading </div>) }
+      { data ? null : (<div> Data Loading... </div>) }
       { data && 
         <CardsContainer>
             {data.map(item => (
