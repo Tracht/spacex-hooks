@@ -1,6 +1,6 @@
 # SpaceX!
 
-### Tasks
+### User Stories
 **Core**
 * As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
   - Acceptance criteria: a list of suppliers is displayed with key information shown
