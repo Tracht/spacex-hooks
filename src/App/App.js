@@ -36,6 +36,6 @@ export default App;
 // styled component
 const AppStyle = styled.div`
   text-align: center;
-  font-family: Helvetica, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   /* background-color: #282c34; */
 `

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardWrapper, CardTitle, CardText, CardLink, CardsContainer } from '../../StyledComponents/Card';
+import { CardWrapper, CardTitle, CardText, CardsContainer } from '../../StyledComponents/Card';
 import Button from '../../StyledComponents/Button';
 
 function ItemsAll(props) {
@@ -12,7 +12,7 @@ function ItemsAll(props) {
       { data && 
         <CardsContainer>
             {data.map(item => (
-              <CardWrapper key={ item.id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name } class="item">
+                <CardWrapper key={ item.id | item.rocket_id | item.capsule_serial | item.core_serial | item.mission_id | item.ship_id } class="item">
                 <CardTitle> 
                   { item.name } 
                   { item.rocket_name } 
@@ -25,11 +25,8 @@ function ItemsAll(props) {
                   { item.description ? item.description.substring(0,200) + `...` : null } 
                   { item.details ? item.details.substring(0,200) + `...` : null } 
                 </CardText>
-                {/* <CardLink href={ item.wikipedia | item.url }> 
-                  { item.wikipedia | item.url ? `website` : null  } 
-                </CardLink> */}
                 <Button 
-                  onClick={()=>{ setSelected(item.id); setModalState(true) }} 
+                  onClick={ ()=>{ setSelected(  item.id | item.rocket_id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name ); setModalState(true) }} 
                 > 
                   Learn more 
                 </Button>

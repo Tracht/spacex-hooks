@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Create a Wrapper component that'll render an <a> href tag with some styles
 export const CardLink = styled.a`
   font-size: 1.1em;
-  color: white;
+  color: "#00cc99";
   /* Text align does not work for hrefs */
   /* text-align: left;  */
 `;
@@ -13,11 +13,12 @@ export const CardText = styled.p`
   font-size: 1em;
   text-align: ${ props => props.center ? "center" : "left" };
   color: white;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 // Create a Title component that'll render an <h1> tag with some styles
 export const CardTitle = styled.h1`
-  font-family: Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   text-align: ${ props => props.center ? "center" : "left" };
 
