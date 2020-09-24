@@ -1,10 +1,15 @@
 # SpaceX!
 
-### Task
-Build a React app with the functionality that meets the following requirements:
-* Fetch and render a list of rockets or dragons from [SpaceX's API](https://docs.spacexdata.com/).
-* Show extended information about a selected list item in a separate box, modal or page.
-* You have complete freedom over what the UI looks like
+### Tasks
+**Core**
+* As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
+  - Acceptance criteria: a list of suppliers is displayed with key information shown
+  - Page loads in a sensible amount of time   
+
+**Extras** 
+* As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
+* As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
+* As a user, so that I can better navigate their inventory, I would like to see everything sorted alphabetically. 
 
 ### TechStack 
 - [React](https://github.com/facebook/create-react-app) using functional components
