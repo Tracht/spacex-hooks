@@ -22,12 +22,12 @@ function ItemsAll(props) {
                   { item.ship_name }
                 </CardTitle>
                 <CardText> 
-                  { item.description ? item.description.substring(0,200) : null } 
-                  { item.details ? item.details.substring(0,200) : null } 
+                  { item.description ? item.description.substring(0,200) + `...` : null } 
+                  { item.details ? item.details.substring(0,200) + `...` : null } 
                 </CardText>
-                <CardLink href={ item.wikipedia | item.url }> 
+                {/* <CardLink href={ item.wikipedia | item.url }> 
                   { item.wikipedia | item.url ? `website` : null  } 
-                </CardLink>
+                </CardLink> */}
                 <Button 
                   onClick={()=>{ setSelected(item.id); setModalState(true) }} 
                 > 

@@ -13,8 +13,8 @@ const Main = () => {
   const [isError, setIsError] = useState(false);
   const [allData, setAllData] = useState(null);
   const [showData, setShowData] = useState(null);
-  const [inventoryCount, setInventoryCount] = useState(null);
-  const [pages, setPages] = useState([1,2]);
+  const [inventoryCount, setInventoryCount] = useState(8);
+  const [pages, setPages] = useState([1,2,3]);
 
   // Sets 'setAllData', 'setInventoryCount', 'setPages', 'setIsError'
   useEffect(() => {
@@ -23,20 +23,22 @@ const Main = () => {
         console.log('succesful api request', response.data)
         setAllData(response.data)
         setInventoryCount(response.data.length)
-        setPages( [...Array(Math.ceil( inventoryCount / itemsToDisplay )).keys()] )
+        setPages( [...Array(Math.ceil( inventoryCount / itemsToDisplay )).keys().unshift()] )  // unshift removes 0 from array
       })
       .catch((error) => {
         console.log('error with the request', error)
         setIsError(true)
       });
   }, 
-  [userSelection, inventoryCount], 
+  [], 
+  // [userSelection, inventoryCount, setAllData, setShowData], 
   console.log(
     "userSelection:", userSelection, 
     "inventoryCount:", inventoryCount, 
     "pages:", pages,
     "allData:", allData, 
-    "showData:", showData)
+    "showData:", showData,
+    )
   );
 
   // determines what inventory shown to the user, depending on pagination
@@ -46,7 +48,7 @@ const Main = () => {
       var endSlice = itemsToDisplay; 
     } else {
       startSlice = itemsToDisplay * (pageNumber - 1); 
-      endSlice = (itemsToDisplay * pageNumber) + 1; 
+      endSlice = (itemsToDisplay * pageNumber); 
     }
     return setShowData(allData.slice(startSlice, endSlice));
   } 
