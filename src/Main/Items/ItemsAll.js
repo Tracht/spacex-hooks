@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardWrapper, CardTitle, CardText, CardsContainer } from '../../StyledComponents/Card';
+import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../../StyledComponents/Card';
 import Button from '../../StyledComponents/Button';
 
 function ItemsAll(props) {
@@ -21,19 +21,22 @@ function ItemsAll(props) {
                   { item.mission_name }
                   { item.ship_name }
                 </CardTitle>
+               <CardContentWrapper>
                 <CardText> 
-                  { item.description ? item.description.substring(0,200) + `...` : null } 
-                  { item.details ? item.details.substring(0,200) + `...` : null } 
-                </CardText>
-                <Button 
-                  onClick={ ()=>{ setSelected(  item.id | item.rocket_id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name ); setModalState(true) }} 
-                > 
-                  Learn more 
-                </Button>
+                    { item.description ? item.description.substring(0,200) + `...` : null } 
+                    { item.details ? item.details.substring(0,200) + `...` : null } 
+                  </CardText>
+               </CardContentWrapper>
+                 <Button 
+                    onClick={ ()=>{ setSelected(  item.id | item.rocket_id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name ); setModalState(true) }} 
+                  > 
+                    Learn more 
+                  </Button>
               </CardWrapper>
               ))
             }
        </CardsContainer>
+
       }
     </div>
   );

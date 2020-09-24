@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// https://lukebrown.io/post/how-to-create-a-spacing-system-with-styled-components/
+
 
 // Create a Wrapper component that'll render an <a> href tag with some styles
 export const CardLink = styled.a`
@@ -25,25 +27,41 @@ export const CardTitle = styled.h1`
   color: white;
 `;
 
+export const CardContentWrapper = styled.div`
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+`
+
 export const CardWrapper = styled.section`
+  background: ${ props => props.green ? "#00cc99" : "transparent" };
+  color: white;
+  border: 2px solid white; 
   border-radius: 3px;
-  padding: 1rem 1rem 1rem 1rem;
+  /* padding: 1rem 1rem 1rem 1rem; */
+  padding: 0.75rem;
+  
   margin: 1rem 1rem;
   margin: 4px 4px;
   width: auto;
   height: auto;
-
+  
   flex: 1;
   flex-basis: 20%;
-  
-  background: ${ props => props.green ? "#00cc99" : "transparent" };
-  color: ${ props => props.green ? "white" : "white" };
-  border: 2px solid white;
 `; 
 
 export const CardsContainer = styled.div`
-  width: flex;
+  /* width: flex;
   display: flex;
   flex-flow: row wrap;
-  position: relative;
+  position: relative; */
+
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-gap: 0.75rem;
+  padding: 1.5rem;
 `

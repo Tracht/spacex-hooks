@@ -6,7 +6,7 @@ import ItemListContainer from './Items/ItemListContainer';
 import Button from '../StyledComponents/Button';
 // import NavBar from './NavBar/NavBar';
 
-const inventory = ['dragons', 'capsules', 'cores', 'missions', 'ships'];
+const inventory = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const itemsToDisplay = 8;
 
 const Main = () => {
@@ -88,7 +88,7 @@ const Main = () => {
     </MainDiv>
 
      {/* Modal  */}
-
+      
 
     </div>
   );
