@@ -3,8 +3,7 @@ import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } 
 import Link from '../../../StyledComponents/Link';
 
 function ItemsAll(props) {
-
-  const { data, isError, setSelected, setModalState } = props
+  const { data, isError, handleActiveSelection } = props
   return(
     <div>
       { isError && <p> Error fetching content </p> } 
@@ -25,7 +24,7 @@ function ItemsAll(props) {
                         { item.description ? item.description.substring(0,200) + `...` : null } 
                         { item.details ? item.details.substring(0,200) + `...` : null } 
                     </CardText>
-                    <Link green href="#" onClick={ ()=>{ setSelected(  item.id | item.capsule_id | item.core_serial | item.mission_name | item.ship_name ); setModalState(true) }} >
+                    <Link green onClick={ () => handleActiveSelection(item, true) } href="#">
                         Learn more 
                     </Link>
                 </CardContentWrapper>

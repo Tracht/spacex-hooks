@@ -9,15 +9,15 @@ export const CardLink = styled.a`
 `;
 
 export const CardText = styled.p`
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: ${ props => props.center ? "center" : "left" };
-  color: white;
+  color: lightgrey;
   font-family: 'Open Sans', sans-serif;
 `;
 
 export const CardTitle = styled.h1`
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: ${ props => props.center ? "center" : "left" };
   color: white;
 `;

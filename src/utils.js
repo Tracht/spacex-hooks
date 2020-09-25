@@ -10,12 +10,11 @@ const sortAtoZ = (array) => {
       return a < b ? -1 : a > b ? 1 : 0;
     } else if ( a.rocket_name ) {
       a = a.rocket_name 
-      b = b.rocket_name 
+      b = b.core_serial 
       return a < b ? -1 : a > b ? 1 : 0;
     } 
     return null 
   });
 }
-
 
 export default sortAtoZ;

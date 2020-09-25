@@ -1,12 +1,13 @@
 import React from 'react';
-// import { CardTitle, CardText } from '../../StyledComponents/Card';
+import Button from '../../../StyledComponents/Button';
+import Modal from '../../../StyledComponents/Modal';
 
 function Capsules(props) {
-  const { data } = props
+  const { data, keepOpenActiveSelection } = props
   if (!data) return null
 
   return(
-    <div>
+    <Modal>
       <h1>{data.capsule_serial}</h1>
       <p>{`Status: ` && data.status } </p>
       <p>{`Original launch: ` && data.original_launch }</p>
@@ -21,7 +22,10 @@ function Capsules(props) {
           </div>  
         )}) }
       </p>
-    </div>
+      <Button green onClick={keepOpenActiveSelection(false)} type="submit" >
+        Close
+      </Button>
+    </Modal>
   )
 }
 
