@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import sortArray from '../utils';
-import InventoryDiv from './InventoryDiv';
-import ItemsAll from './Items/ItemsAll';
+import sortArray from '../../../utils';
+import DisplayInventory from './Items/DisplayInventory';
 import ItemModalData from './Items/ItemModalData';
-import Button from '../StyledComponents/Button';
-import Link from '../StyledComponents/Link';
+import Button from '../../StyledComponents/Button';
+import Link from '../../StyledComponents/Link';
 
 const inventory = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const itemsToDisplay = 8;
@@ -55,7 +54,8 @@ const Main = () => {
   } 
 
   return(
-    <InventoryDiv large>
+    <div>
+
       {/* Filters inventory */}
       <ul>  
         {inventory.map(selection => (
@@ -66,20 +66,21 @@ const Main = () => {
       </ul>
     
       {/* Pagination */}
-      <h3> {userSelection} </h3>
       <ul>  
-        {pages.length === 1 ? 'page ' : 'pages ' }
+        {/* {pages.length === 1 ? 'page ' : 'pages ' } */}
+        <h2> {userSelection} </h2>
         {pages.map(pageNumber => (
-          <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
-             <span> {` `} {pageNumber + 1} { ` `} </span>
-          </Link>
-          ))} 
+            <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
+             { pageNumber + 1 + ' '}
+            </Link>
+        ))} 
       </ul>
     
       {/* Displays inventory & Modal */}
-      <ItemsAll data={showData}> </ItemsAll>
+      <DisplayInventory data={showData}> </DisplayInventory>
       <ItemModalData />
-    </InventoryDiv>
+    </div>
   );
+  
 }
 export default Main;

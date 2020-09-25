@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import AppStyle from './AppStyle';
-import Homepage from '../Homepage/Homepage';
-import Inventory from '../Inventory/Inventory';
-// import Button from '../StyledComponents/Button';
-import Link from '../StyledComponents/Link'
+import Homepage from './Components/Homepage/Homepage';
+import HomepageStyle from './Components/Homepage/HomepageStyle';
+import InventoryStyle from './Components/Inventory/InventoryStyle';
+import Inventory from './Components/Inventory/Inventory';
+import Link from './StyledComponents/Link'
 
 
 const App = () => {
@@ -16,17 +17,20 @@ const App = () => {
   if ( showHomePage === true ) {
     return(
       <AppStyle> 
-        <Link green href="#" onClick={toggleHomePage} > Explore our inventory </Link>
-        {/* <Button onClick={toggleHomePage} green > </Button> */}
-        <Homepage /> 
+        <HomepageStyle>
+          <Link green href="#" onClick={toggleHomePage} >Explore our inventory</Link> 
+          <Homepage />  
+        </HomepageStyle>
+       
       </AppStyle>
     );  
   } else {
       return(
         <AppStyle> 
-          <Link green href="#" onClick={toggleHomePage} > Go to homepage </Link>
-          {/* <Button onClick={toggleHomePage} green > Go to homepage </Button> */}
-          <Inventory />
+          <InventoryStyle>
+            <Link green href="#" onClick={toggleHomePage} >Go to homepage</Link>
+            <Inventory />
+          </InventoryStyle>
         </AppStyle>
       );
     }

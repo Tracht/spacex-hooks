@@ -23,11 +23,11 @@ export const CardTitle = styled.h1`
 `;
 
 export const CardContentWrapper = styled.div`
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
   p {
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
 `
