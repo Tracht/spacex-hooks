@@ -1,26 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components'
+import MainDiv from '../Inventory/InventoryDiv';
+// import HeadlineStyle from './HeadlineStyle';
 import Button from '../StyledComponents/Button';
 import Image from '../StyledComponents/Image';
 import QUOTES from './Quotes';
 
-// component style 
-const HeadlineStyle = styled.div`
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-`
-// variables
 let counter = 0;
 
-// component  
 const Headline = () => {
-
   const [quote, setQuote] = useState(QUOTES[0]);
 
   useEffect(() => {       // runs on mount & update
@@ -36,13 +23,12 @@ const Headline = () => {
   };
     
   return (
-      <HeadlineStyle>
+    <MainDiv>
         <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
           <p> {quote} </p>
         <Button onClick={nextQuote} > summon wisdom </Button>
-      </HeadlineStyle>
+    </MainDiv>
   )
-
 }
 
 export default Headline;

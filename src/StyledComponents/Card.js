@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 // https://lukebrown.io/post/how-to-create-a-spacing-system-with-styled-components/
-
-
-// Create a Wrapper component that'll render an <a> href tag with some styles
+ 
 export const CardLink = styled.a`
   font-size: 1.1em;
   color: "#00cc99";
@@ -10,7 +8,6 @@ export const CardLink = styled.a`
   /* text-align: left;  */
 `;
 
-// Create a Wrapper component that'll render a <p> tag with some styles
 export const CardText = styled.p`
   font-size: 1em;
   text-align: ${ props => props.center ? "center" : "left" };
@@ -18,25 +15,22 @@ export const CardText = styled.p`
   font-family: 'Open Sans', sans-serif;
 `;
 
-// Create a Title component that'll render an <h1> tag with some styles
 export const CardTitle = styled.h1`
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   text-align: ${ props => props.center ? "center" : "left" };
-
   color: white;
 `;
 
 export const CardContentWrapper = styled.div`
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
   p {
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
   }
 `
-
 export const CardWrapper = styled.section`
   background: ${ props => props.green ? "#00cc99" : "transparent" };
   color: white;

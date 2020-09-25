@@ -1,41 +1,34 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import Headline from '../Headline/Headline';
-import Main from '../Main/Main';
-import Button from '../StyledComponents/Button';
+import AppStyle from './AppStyle';
+import Homepage from '../Homepage/Homepage';
+import Inventory from '../Inventory/Inventory';
+// import Button from '../StyledComponents/Button';
+import Link from '../StyledComponents/Link'
 
 
-// component
 const App = () => {
-
   const [showHomePage, setHomePage] = useState(true);
 
   const toggleHomePage = () => {
     return setHomePage(!showHomePage); 
   }
 
-    if ( showHomePage === true ) {
+  if ( showHomePage === true ) {
+    return(
+      <AppStyle> 
+        <Link green href="#" onClick={toggleHomePage} > Explore our inventory </Link>
+        {/* <Button onClick={toggleHomePage} green > </Button> */}
+        <Homepage /> 
+      </AppStyle>
+    );  
+  } else {
       return(
         <AppStyle> 
-          <Button onClick={toggleHomePage} green > Explore our inventory</Button>
-          <Headline /> 
+          <Link green href="#" onClick={toggleHomePage} > Go to homepage </Link>
+          {/* <Button onClick={toggleHomePage} green > Go to homepage </Button> */}
+          <Inventory />
         </AppStyle>
-      );  
-    } else {
-        return(
-          <AppStyle> 
-            <Button onClick={toggleHomePage} green > Go to homepage </Button>
-            <Main />
-          </AppStyle>
-        );
-      }
+      );
+    }
 }
-
 export default App;
-
-// styled component
-const AppStyle = styled.div`
-  text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  /* background-color: #282c34; */
-`

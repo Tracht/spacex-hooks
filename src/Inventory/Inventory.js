@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import sortArray from '../utils';
-import styled from 'styled-components';
-import ItemListContainer from './Items/ItemListContainer';
+import InventoryDiv from './InventoryDiv';
+import ItemsAll from './Items/ItemsAll';
+import ItemModalData from './Items/ItemModalData';
 import Button from '../StyledComponents/Button';
-// import NavBar from './NavBar/NavBar';
+import Link from '../StyledComponents/Link';
 
 const inventory = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const itemsToDisplay = 8;
@@ -16,6 +17,7 @@ const Main = () => {
   const [showData, setShowData] = useState(null);
   const [inventoryCount, setInventoryCount] = useState(null);
   const [pages, setPages] = useState([1,2,3]);
+  const [showModal, setShowModal] = useState(false);
 
   // Sets 'setAllData', 'setInventoryCount', 'setPages', 'setIsError'
   useEffect(() => {
@@ -37,13 +39,11 @@ const Main = () => {
     "userSelection:", userSelection, 
     "inventoryCount:", inventoryCount, 
     "pages:", pages,
-    // "allData:", allData, 
     "showData:", showData,
     )
   );
 
-  // determines what inventory shown to the user, depending on pagination
-  const updateInventoryDisplay = (pageNumber) => {
+  const pageClick = (pageNumber) => {
     if (pageNumber === 1) {
       var startSlice = 0; 
       var endSlice = itemsToDisplay; 
@@ -55,10 +55,8 @@ const Main = () => {
   } 
 
   return(
-    <div>
-
-    {/* Filter inventory using a list of buttons  */}
-    <MainDiv>
+    <InventoryDiv large>
+      {/* Filters inventory */}
       <ul>  
         {inventory.map(selection => (
           <Button key={selection} value={selection} onClick={() => setUserSelection(selection)} green >
@@ -66,41 +64,22 @@ const Main = () => {
           </Button>
           ))}
       </ul>
-    </MainDiv> 
-
-    {/* Buttons for paginating across inventory  */}
-    <MainDiv>
+    
+      {/* Pagination */}
+      <h3> {userSelection} </h3>
       <ul>  
-        { pages.length === 1 ? 'page ' : 'pages' }
+        {pages.length === 1 ? 'page ' : 'pages ' }
         {pages.map(pageNumber => (
-          <Button key={pageNumber} value={pageNumber} onClick={() => updateInventoryDisplay(pageNumber + 1)} small >
-            {pageNumber + 1}  
-          </Button>
+          <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
+             <span> {` `} {pageNumber + 1} { ` `} </span>
+          </Link>
           ))} 
       </ul>
-    </MainDiv> 
-
-     <h1> {userSelection} </h1>   
-
-    {/* Displays the inventory, based on filter selection  */}
-    <MainDiv large>
-      <ItemListContainer data={showData} isError={isError} />
-    </MainDiv>
-
-     {/* Modal  */}
-      
-
-    </div>
+    
+      {/* Displays inventory & Modal */}
+      <ItemsAll data={showData}> </ItemsAll>
+      <ItemModalData />
+    </InventoryDiv>
   );
 }
 export default Main;
-
-// styled component 
-const MainDiv = styled.div`
-  background-color: #282c34;
-  min-height: ${props => props.large ? "100vh" : "10vh"};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`
