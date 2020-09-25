@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from './device';
 // https://lukebrown.io/post/how-to-create-a-spacing-system-with-styled-components/
  
 export const CardLink = styled.a`
@@ -54,8 +55,32 @@ export const CardsContainer = styled.div`
   flex-flow: row wrap;
   position: relative; */
 
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-gap: 0.75rem;
-  padding: 1.5rem;
+  @media ${device.laptopL | device.desktop } {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  @media ${device.laptop } {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  @media ${ device.mobileL | device.tablet} { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  @media ${ device.mobileM | device.mobileS } {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
 `
