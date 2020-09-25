@@ -9,7 +9,7 @@ const Homepage = () => {
   const [quote, setQuote] = useState(QUOTES[0]);
 
   useEffect(() => {       // runs on mount & update
-      if (counter <= 3 ) { setQuote(QUOTES[counter]) } 
+      if (counter <= QUOTES.length - 1 ) { setQuote(QUOTES[counter]) } 
       else {
         counter = 0;
         setQuote(QUOTES[counter]) 
