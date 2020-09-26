@@ -1,31 +1,55 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import Modal from '../../../StyledComponents/Modal';
+import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
 
 function Cores(props) {
-  const { data, keepOpenActiveSelection } = props
-  if (!data) return null
+  const { activeSelection, keepOpenActiveSelection } = props
+  if (!activeSelection) return null
 
   return(
-    <Modal>
-      <h1>{data.core_serial}</h1>
-      <p>{`Status: ` && data.status } </p>
-      <p>{`Original launch: ` && data.original_launch }</p>
-      <p>{`Re-use count: ` && data.reuse_count }</p>
-      <p>{`Water landing: ` && data.water_landing }</p>
-      <p>{`Details: ` && data.details }</p>
-      <p>{`Missions: ` && data.missions.map((item) => {
-        return (
-            <div key={data.missions.name} >
-            <p>{`Name: ` && data.missions.name}</p>
-            <p>{`Flight: ` && data.missions.flight}</p>
-          </div>  
-        )}) }
-      </p>
-      <Button green onClick={keepOpenActiveSelection(false)} type="submit" >
-        Close
-      </Button>
-    </Modal>
+    <ModalOverlay>
+      <Modal>
+        <ModalContent>
+          <h1>{activeSelection.core_serial}</h1>
+          
+          <h2>Background</h2>
+          { activeSelection.status && <p> Status: {activeSelection.status } </p> }
+          { activeSelection.original_launch ? 
+            <p> Original launch: {activeSelection.original_launch } </p> 
+            : <p>Original launch: Has not been launched.</p>
+          }
+          { activeSelection.reuse_count ? 
+            <p> Re-use count: {activeSelection.reuse_count } </p> : 
+            <p> Re-use count: {activeSelection.reuse_count } </p>
+          }
+          { activeSelection.water_landing ? 
+            <p> Water landings: {activeSelection.water_landing } </p> :
+            <p> Water landings: {activeSelection.water_landing } </p> 
+          }
+          { activeSelection.details ? 
+            <p> Details: {activeSelection.details } </p> 
+            : <p>Details: No details provided.</p>
+          }
+
+          { activeSelection.missions ? <h2>Missions</h2> : null }
+          { activeSelection.missions[0] ? 
+            activeSelection.missions.map((item) => {
+              return (
+                <div key={item.name} >
+                  <p>Name: {item.name}</p>
+                  <p>Flight: {item.flight}</p>
+                </div>  
+              )}) : 
+              <p>No missions</p>
+          }
+          <br></br>
+          <Button green onClick={keepOpenActiveSelection} type="submit" >
+            Close
+          </Button>
+          <br></br>
+        </ModalContent>
+      </Modal>
+    </ModalOverlay>
   )
 }
 

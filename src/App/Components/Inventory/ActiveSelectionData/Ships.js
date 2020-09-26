@@ -1,32 +1,66 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import Modal from '../../../StyledComponents/Modal';
+import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
 
 function Ships(props) {
-  const { data, keepOpenActiveSelection } = props
-  if (!data) return null
+  const { activeSelection, keepOpenActiveSelection } = props
+  if (!activeSelection) return null
 
   return(
-    <Modal>
-      <h1>{ data.ship_name }</h1>
-      <p>{ `Ship type: ` && data.ship_type }</p>
-      <p>{ `Status: ` && data.active ? `Active` : `Not active` }</p>
-      <p>{ `Year built: ` && data.year_built }</p>
-      <p>{ `Home port: ` && data.home_port }</p>
-      <p>{ `Roles: ` && data.roles.map((item) => {
-        return (
-            <p key={item} > {item}</p>
-        )}) }
-      </p>
-      <p>{ `Successful landings: ` && data.successful_landings }</p>
-      <p>{ `Attempted landings: ` && data.attempted_landings }</p>
-      <a href={data.url} > { `Website: ` && data.url } </a>
-      <img src={data.image} alt={data.ship_name} width="500" height="600"></img>
+    <ModalOverlay>
+      <Modal>
+        <ModalContent>
+          <h1>{ activeSelection.ship_name }</h1>
+          { activeSelection.image && <img src={activeSelection.image} alt={activeSelection.ship_name} width="300" height="250"></img> }  
 
-      <Button green onClick={keepOpenActiveSelection(false)} type="submit" >
-        Close
-      </Button>
-    </Modal>
+          <h2>Background</h2>
+          { activeSelection.ship_type ? 
+            <p>Ship type: {activeSelection.ship_type} </p> 
+            : <p>Ship type: No information provided</p>
+          } 
+          { activeSelection.active ? 
+            <p> Status: {activeSelection.active} </p> 
+            : <p> Status: No information provided</p>
+          } 
+          { activeSelection.year_built ? 
+            <p>Ship type: {activeSelection.year_built} </p> 
+            : <p>Year built: No information provided</p>
+          } 
+          { activeSelection.home_port ? 
+            <p>Ship type: {activeSelection.home_port} </p> 
+            : <p>Home port: No information provided</p>
+          } 
+          { activeSelection.successful_landings ? 
+            <p>Successful landings: {activeSelection.successful_landings} </p> 
+            : <p>Sucessful landings: No information provided</p>
+          } 
+          { activeSelection.attempted_landings ? 
+            <p>Attempted landings: {activeSelection.attempted_landings} </p> 
+            : <p>Attempted landings: No information provided</p>
+          } 
+
+          { activeSelection.roles ? <h2>Roles </h2> : null }
+          { activeSelection.roles ? 
+            activeSelection.roles.map((item) => {
+              return (
+                <div>
+                  <p key={item} > {item}</p>
+                </div>
+               )}) : <p> No role information available</p>
+          }
+
+          { activeSelection.url ? <h2>Learn more </h2> : null }
+          { activeSelection.url && <a href={activeSelection.url} > Website </a> } 
+          
+          <br></br>
+          <Button green onClick={keepOpenActiveSelection} type="submit" >
+            Close
+          </Button>
+          <br></br>
+
+        </ModalContent>
+      </Modal>
+    </ModalOverlay>
   )
 }
 

@@ -1,33 +1,53 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import Modal from '../../../StyledComponents/Modal';
+import Link from '../../../StyledComponents/Link';
+import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
 
 function Missions(props) {
-  const { data, keepOpenActiveSelection } = props
-  if (!data) return null
+  const { activeSelection, keepOpenActiveSelection } = props
+  if (!activeSelection) return null
 
   return(
-    <Modal>
-      <h1>{ data.mission_name }</h1>
-      <p>{ data.description }</p>
-      <p>{ `Manufacturers: ` && data.manufacturers.map((item) => {
-        return (
-            <p key={item} >{item}</p>
-        )}) }
-      </p>
-      <p>{ `Payloads: ` && data.payload_ids.map((item) => {
-        return (
-            <p key={item} > {item}</p>
-        )}) }
-      </p>
-      <a href={data.wikipedia} > { `Wikipedia` && data.wikipedia } </a>
-      <a href={data.website} > { `Website` && data.website } </a>
-      <a href={data.twitter} > { `Twitter` && data.twitter } </a>
+    <ModalOverlay>
+      <Modal>
+        <ModalContent>
+          <h1>{ activeSelection.mission_name }</h1>
 
-      <Button green onClick={keepOpenActiveSelection(false)} type="submit" >
-        Close
-      </Button>
-    </Modal>
+          <h2>Background</h2>
+          <p>{ activeSelection.description }</p>
+          
+          { activeSelection.manufacturers ? <h2>Manufacturers</h2> : null }
+          { activeSelection.manufacturers ? 
+            activeSelection.manufacturers.map((item) => {
+              return (
+                <div>
+                  <p key={item}> {item} </p>
+                </div>
+              )}) : <p> No manufacturers </p>
+          }    
+
+          { activeSelection.payload_ids ? <h2>Payloads</h2> : null }
+          { activeSelection.payload_ids[0] ?
+            activeSelection.payload_ids.map((item) => {
+              return (
+                <div>
+                  <p key={item}> {item} </p> 
+                </div>
+            )}) : <p> No Payloads </p>
+          }
+
+          { activeSelection.wikipedia || activeSelection.website || activeSelection.twitter ? <h2>Learn more </h2> : null }
+          { activeSelection.wikipedia && <Link href={activeSelection.wikipedia} > Wikipedia </Link> } <br></br>
+          { activeSelection.website && <Link href={activeSelection.website} > Website </Link> } <br></br>
+          { activeSelection.twitter && <Link href={activeSelection.twitter} > Twitter </Link> } <br></br>
+          
+          <Button green onClick={keepOpenActiveSelection} type="submit" >
+            Close
+          </Button>
+          <br></br>
+        </ModalContent>
+      </Modal> 
+    </ModalOverlay>
   )
 }
 

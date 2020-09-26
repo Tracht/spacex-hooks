@@ -7,18 +7,20 @@ import Ships from '../ActiveSelectionData/Ships';
 
 function ItemModalData(props) {
   const { inventoryCategory, activeSelection, keepOpenActiveSelection } = props
+
+  console.log("Item Modal Data", "Active selection", activeSelection, "keepOpen:", keepOpenActiveSelection)
   
-  if (activeSelection ) {
+  if ( activeSelection ) {
     if ( inventoryCategory === 'capsules' ) {
-      return <Capsules data={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/> 
+      return <Capsules activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/> 
     } else if ( inventoryCategory === 'cores' ) {
-      return <Cores data={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
+      return <Cores activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
     } else if ( inventoryCategory === 'dragons' ) {
-      return <Dragons data={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
+      return <Dragons activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
     } else if ( inventoryCategory === 'missions' ) {
-      return <Missions data={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
+      return <Missions activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
     } else if ( inventoryCategory === 'ships' ) {
-      return <Ships data={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
+      return <Ships activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
     }
   } else return null; 
 

@@ -47,12 +47,12 @@ const Main = () => {
   } 
 
   const handleActiveSelection = (item, boolean) => {
-    setActiveSelection(item, console.log(item));
-    setShowModal(boolean, console.log(boolean));
+    setActiveSelection(item);
+    setShowModal(boolean);
   }
 
-  const keepOpenActiveSelection = (boolean) => {
-    setShowModal(boolean, console.log(boolean));
+  const keepOpenActiveSelection = () => {
+    setShowModal(false);
   }
 
   return(
@@ -88,7 +88,7 @@ const Main = () => {
       {showModal && 
         <ItemModalData 
           inventoryCategory={inventoryCategory}
-          data={activeSelection}
+          activeSelection={activeSelection}
           keepOpenActiveSelection={keepOpenActiveSelection} >
         </ItemModalData> 
       }
