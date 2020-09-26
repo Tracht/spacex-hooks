@@ -22,10 +22,10 @@ function Dragons(props) {
           }
 
           <h2>Background</h2>
-          { activeSelection.active ? <p> Status: active </p> : <p> Status: not active </p> }
+          { activeSelection.active ? <p> Status: {activeSelection.active } </p> : <p> Status: {activeSelection.active } </p> }
           { activeSelection.crew_capacity ? 
-            <p> Crew capacity: 0 </p> : 
-            <p> Crew capacity: {activeSelection.crew_capacity} </p> 
+            <p> Crew capacity: 0 </p> 
+            : <p> Crew capacity: {activeSelection.crew_capacity} </p> 
           }
           { activeSelection.dry_mass_kg && activeSelection.dry_mass_lb && 
             <p> Dry mass: {activeSelection.dry_mass_kg}kg / {activeSelection.dry_mass_lb}lbs </p> 

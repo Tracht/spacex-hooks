@@ -13,18 +13,21 @@ function Cores(props) {
           <h1>{activeSelection.core_serial}</h1>
           
           <h2>Background</h2>
-          { activeSelection.status && <p> Status: {activeSelection.status } </p> }
+          { activeSelection.status ? 
+            <p> Status: {activeSelection.status } </p> 
+            : <p> Status: {activeSelection.status } </p> 
+          }
           { activeSelection.original_launch ? 
             <p> Original launch: {activeSelection.original_launch } </p> 
             : <p>Original launch: Has not been launched.</p>
           }
           { activeSelection.reuse_count ? 
-            <p> Re-use count: {activeSelection.reuse_count } </p> : 
-            <p> Re-use count: {activeSelection.reuse_count } </p>
+            <p> Re-use count: {activeSelection.reuse_count } </p> 
+            : <p> Re-use count: {activeSelection.reuse_count } </p>
           }
           { activeSelection.water_landing ? 
-            <p> Water landings: {activeSelection.water_landing } </p> :
             <p> Water landings: {activeSelection.water_landing } </p> 
+            : <p> Water landings: {activeSelection.water_landing } </p> 
           }
           { activeSelection.details ? 
             <p> Details: {activeSelection.details } </p> 
@@ -39,8 +42,8 @@ function Cores(props) {
                   <p>Name: {item.name}</p>
                   <p>Flight: {item.flight}</p>
                 </div>  
-              )}) : 
-              <p>No missions</p>
+              )}) 
+              : <p>No missions</p>
           }
           <br></br>
           <Button green onClick={keepOpenActiveSelection} type="submit" >

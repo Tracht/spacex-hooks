@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
+import {ModalOverlay, ModalContent, Modal } from '../../../StyledComponents/Modal';
 
 function Ships(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -19,8 +19,8 @@ function Ships(props) {
             : <p>Ship type: No information provided</p>
           } 
           { activeSelection.active ? 
-            <p> Status: {activeSelection.active} </p> 
-            : <p> Status: No information provided</p>
+            <p> Active: {activeSelection.active} </p> 
+            : <p> Active: {activeSelection.active} </p>
           } 
           { activeSelection.year_built ? 
             <p>Ship type: {activeSelection.year_built} </p> 
@@ -46,7 +46,8 @@ function Ships(props) {
                 <div>
                   <p key={item} > {item}</p>
                 </div>
-               )}) : <p> No role information available</p>
+               )}) 
+               : <p> No role information available </p>
           }
 
           { activeSelection.url ? <h2>Learn more </h2> : null }
