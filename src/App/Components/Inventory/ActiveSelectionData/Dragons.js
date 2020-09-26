@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
+import Link from '../../../StyledComponents/Link';
+import { ModalOverlay, ModalContent, Modal, ModalTitle, ModalImage } from '../../../StyledComponents/Modal';
 
 function Dragons(props) {
   const { activeSelection, keepOpenActiveSelection} = props
@@ -12,20 +13,18 @@ function Dragons(props) {
         <ModalContent>
           <h1>{ activeSelection.name }</h1>
           
-          { activeSelection.flickr_images && 
-            activeSelection.flickr_images.map((photo) => {
-              return (
-                <div>
-                  <img src={photo} alt="dragon" width="300" height="250"></img> 
-                </div>
-              )})
-          }
+              { activeSelection.flickr_images && 
+                activeSelection.flickr_images.map((photo) => {
+                  return (
+                      <ModalImage src={photo} alt="dragon" width="300" height="250"></ModalImage> 
+                  )})
+              }
 
-          <h2>Background</h2>
-          { activeSelection.active ? <p> Status: {activeSelection.active } </p> : <p> Status: {activeSelection.active } </p> }
+          <ModalTitle green center> Background </ModalTitle>
+          { activeSelection.active ? <p> Active </p> : <p> Not Active </p> }
           { activeSelection.crew_capacity ? 
-            <p> Crew capacity: 0 </p> 
-            : <p> Crew capacity: {activeSelection.crew_capacity} </p> 
+            <p> Crew capacity: {activeSelection.crew_capacity} </p> 
+            : <p> Crew capacity: 0 </p> 
           }
           { activeSelection.dry_mass_kg && activeSelection.dry_mass_lb && 
             <p> Dry mass: {activeSelection.dry_mass_kg}kg / {activeSelection.dry_mass_lb}lbs </p> 
@@ -38,17 +37,17 @@ function Dragons(props) {
             : <p> First flight: No information provided </p>
           }
 
-          { activeSelection.heat_shield ? <h2>Heat Shield </h2> : null }
+          { activeSelection.heat_shield ? <ModalTitle green center> Heat Shield </ModalTitle> : null }
           { activeSelection.heat_shield.material ? 
             <p> Material: { activeSelection.heat_shield.material } </p> 
             : <p> Material: No information provided</p>
           }
           { activeSelection.heat_shield.size_meters ? 
-            <p> Meters: { activeSelection.heat_shield.size_meters } </p> 
-            : <p>Meters: No information provided</p>
+            <p> Size: { activeSelection.heat_shield.size_meters } meters </p> 
+            : <p> Size: No information provided</p>
           }
           { activeSelection.heat_shield.temp_degrees ? 
-            <p> Max temperature: { activeSelection.heat_shield.temp_degrees } F </p> 
+            <p> Max temperature: { activeSelection.heat_shield.temp_degrees } C </p> 
             : <p>Max temperature: No information provided</p>
           }
           { activeSelection.heat_shield.dev_partner ? 
@@ -56,7 +55,7 @@ function Dragons(props) {
             : <p>Development partner: No information provided</p>
           }
           
-          { activeSelection.thrusters ? <h2> Thrusters </h2> : null }
+          { activeSelection.thrusters ? <ModalTitle green center> Thrusters </ModalTitle> : null }
           { activeSelection.thrusters ? 
             activeSelection.thrusters.map((item) => {
               return (
@@ -70,8 +69,8 @@ function Dragons(props) {
             )}) : <p> No thrusters </p>
           } 
 
-          { activeSelection.wikipedia ? <h2>Learn more </h2> : null }
-          { activeSelection.wikipedia && <a href={activeSelection.wikipedia} > Wikipedia </a> } 
+          { activeSelection.wikipedia ? <ModalTitle green center> Learn more </ModalTitle> : null }
+          { activeSelection.wikipedia && <Link href={activeSelection.wikipedia} > Wikipedia </Link> } 
           
           <br></br>
           <Button green onClick={keepOpenActiveSelection} type="submit" >

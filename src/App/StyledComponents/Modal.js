@@ -12,7 +12,6 @@ export const ModalOverlay = styled.div`
   width: 100%;
   height: 100%;
 `
-
 export const Modal = styled.div`
   position: fixed; 
   border: 2px white solid; 
@@ -33,6 +32,27 @@ export const Modal = styled.div`
   height: 400px;
   max-height: 100%;
   max-width: 100%;
+`;
+
+export const ModalTitle = styled.h2`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  text-align: ${ props => props.center ? "center" : "left" };
+  color: ${ props => props.green ? "#00cc99" : "white" };
+`
+
+export const ModalText = styled.p`
+  font-size: 0.9em;
+  text-align: ${ props => props.center ? "center" : "left" };
+  color: "#00cc99";
+  font-family: 'Open Sans', sans-serif;
+`
+
+export const ModalImage = styled.img`
+  width: 50%;
+  height: 200px;
+  /* overflow: hidden; */
+  padding: 10px;
 `;
 
 export const ModalContent = styled.div`

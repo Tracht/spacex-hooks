@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
+import { ModalOverlay, ModalContent, Modal, ModalTitle } from '../../../StyledComponents/Modal';
 
 function Capsules(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -12,7 +12,7 @@ function Capsules(props) {
       <ModalContent>
         <h1>{activeSelection.capsule_serial}</h1>
         
-        <h2>Background</h2>
+        <ModalTitle green center> Background </ModalTitle> 
         { activeSelection.status ?  
           <p> Status: {activeSelection.status} </p> 
           : <p> Status: {activeSelection.status} </p> 
@@ -31,7 +31,7 @@ function Capsules(props) {
           : <p>Details: No details provided.</p>
         }
 
-        { activeSelection.missions ? <h2> Missions </h2> : null }  
+        { activeSelection.missions ? <ModalTitle green center> Missions </ModalTitle> : null }  
         { activeSelection.missions[0] ? 
             activeSelection.missions.map((item) => {
               return (

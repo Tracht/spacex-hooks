@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
 import Link from '../../../StyledComponents/Link';
-import {ModalOverlay, ModalContent, Modal} from '../../../StyledComponents/Modal';
+import {ModalOverlay, ModalContent, Modal, ModalTitle} from '../../../StyledComponents/Modal';
 
 function Missions(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -13,10 +13,10 @@ function Missions(props) {
         <ModalContent>
           <h1>{ activeSelection.mission_name }</h1>
 
-          <h2>Background</h2>
+          <ModalTitle green center> Background </ModalTitle>
           <p>{ activeSelection.description }</p>
           
-          { activeSelection.manufacturers ? <h2>Manufacturers</h2> : null }
+          { activeSelection.manufacturers ? <ModalTitle green center> Manufacturers </ModalTitle> : null }
           { activeSelection.manufacturers ? 
             activeSelection.manufacturers.map((item) => {
               return (
@@ -26,7 +26,7 @@ function Missions(props) {
               )}) : <p> No manufacturers </p>
           }    
 
-          { activeSelection.payload_ids ? <h2>Payloads</h2> : null }
+          { activeSelection.payload_ids ? <ModalTitle green center> Payloads </ModalTitle> : null }
           { activeSelection.payload_ids[0] ?
             activeSelection.payload_ids.map((item) => {
               return (
@@ -36,7 +36,7 @@ function Missions(props) {
             )}) : <p> No Payloads </p>
           }
 
-          { activeSelection.wikipedia || activeSelection.website || activeSelection.twitter ? <h2>Learn more </h2> : null }
+          { activeSelection.wikipedia || activeSelection.website || activeSelection.twitter ?  <ModalTitle green center> Learn more </ModalTitle> : null }
           { activeSelection.wikipedia && <Link href={activeSelection.wikipedia} > Wikipedia </Link> } <br></br>
           { activeSelection.website && <Link href={activeSelection.website} > Website </Link> } <br></br>
           { activeSelection.twitter && <Link href={activeSelection.twitter} > Twitter </Link> } <br></br>

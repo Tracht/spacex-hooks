@@ -21,7 +21,6 @@ const App = () => {
           <Link green href="#" onClick={toggleHomePage} >Explore our inventory</Link> 
           <Homepage />  
         </HomepageStyle>
-       
       </AppStyle>
     );  
   } else {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../../StyledComponents/Button';
-import Image from '../../StyledComponents/Image';
+import { Image } from '../../StyledComponents/Image';
 import QUOTES from './Quotes';
 
 let counter = 0;
@@ -24,7 +24,7 @@ const Homepage = () => {
     <div>
         <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
           <p> {quote} </p>
-        <Button onClick={nextQuote} > summon wisdom </Button>
+        <Button onClick={nextQuote} > get Elon's wisdom </Button>
     </div>
   )
 }

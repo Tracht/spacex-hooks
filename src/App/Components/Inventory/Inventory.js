@@ -10,7 +10,7 @@ const INVENTORY = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const ITEMS_TO_DISPLAY = 8;
 
 const Main = () => {
-  const [inventoryCategory, setInventoryCategory] = useState('missions');
+  const [inventoryCategory, setInventoryCategory] = useState('dragons');
   const [isError, setIsError] = useState(false);
   const [allInventory, setAllInventory] = useState(null);
   const [someInventory, setSomeInventory] = useState(null);
