@@ -18,7 +18,7 @@ const App = () => {
     return(
       <AppStyle> 
         <HomepageStyle>
-          <Link green href="#" onClick={toggleHomePage} >Explore our inventory</Link> 
+          <Link green href="#" onClick={toggleHomePage}> Explore our inventory </Link> 
           <Homepage />  
         </HomepageStyle>
       </AppStyle>
@@ -27,7 +27,7 @@ const App = () => {
       return(
         <AppStyle> 
           <InventoryStyle>
-            <Link green href="#" onClick={toggleHomePage} >Go to homepage</Link>
+            <Link green href="#" onClick={toggleHomePage}> Go to homepage </Link>
           </InventoryStyle>
           <Inventory />
         </AppStyle>
