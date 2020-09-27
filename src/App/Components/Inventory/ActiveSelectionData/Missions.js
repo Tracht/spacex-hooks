@@ -21,7 +21,7 @@ function Missions(props) {
             activeSelection.manufacturers.map((item) => {
               return (
                 <div>
-                  <ModalText> key={item}> {item} </ModalText>
+                  <ModalText key={item}> {item} </ModalText>
                 </div>
               )}) : <ModalText> No manufacturers </ModalText>
           }    
