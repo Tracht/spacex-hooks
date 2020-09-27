@@ -8,12 +8,12 @@
 **Core**
 * As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
   - Acceptance criteria: a list of suppliers is displayed with key information shown
-  - Page loads in a sensible amount of time   
+  - Page loads in a sensible amount of time
 
 **Extras** 
 * As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
 * As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
-* As a user, so that I can better navigate their inventory, I would like to see everything sorted alphabetically. 
+* As a user, so that I can better navigate the inventory, I would like to see everything sorted alphabetically. 
 
 ### TechStack 
 - [React](https://github.com/facebook/create-react-app) using functional components
