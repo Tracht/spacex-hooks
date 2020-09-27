@@ -11,6 +11,8 @@ export const CardLink = styled.a`
 
 export const CardText = styled.p`
   font-size: 0.9em;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: ${ props => props.center ? "center" : "left" };
   color: lightgrey;
   font-family: 'Open Sans', sans-serif;
