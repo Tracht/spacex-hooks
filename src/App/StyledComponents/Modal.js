@@ -28,8 +28,8 @@ export const Modal = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: 350px;
   max-height: 100%;
   max-width: 100%;
 `;

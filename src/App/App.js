@@ -28,8 +28,8 @@ const App = () => {
         <AppStyle> 
           <InventoryStyle>
             <Link green href="#" onClick={toggleHomePage} >Go to homepage</Link>
-            <Inventory />
           </InventoryStyle>
+          <Inventory />
         </AppStyle>
       );
     }

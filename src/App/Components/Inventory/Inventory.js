@@ -3,6 +3,7 @@ import axios from 'axios';
 import sortArray from '../../../utils';
 import DisplayInventory from './InventoryItems/DisplayInventory';
 import ItemModalData from './InventoryItems/ItemModalData';
+import InventoryStyle from './InventoryStyle';
 import Button from '../../StyledComponents/Button';
 import Link from '../../StyledComponents/Link';
 
@@ -57,33 +58,30 @@ const Main = () => {
 
   return(
     <div>
-
+      <InventoryStyle>
       {/* Filters inventory */}
-      <ul> 
         {INVENTORY.map(filter => (
-          <Button key={filter} value={filter} onClick={() => setInventoryCategory(filter)} green >
+          <Button green key={filter} value={filter} onClick={() => setInventoryCategory(filter)} >
             {filter}
           </Button>
         ))}
-      </ul>
-    
-      {/* Pagination */}
-      <ul> 
-        <h2> {inventoryCategory} </h2>
+
+       {/* Pagination */}
+       <h2> {inventoryCategory} </h2>
         {pages.map(pageNumber => (
             <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
              { pageNumber + 1 + ' '}
             </Link>
         ))} 
-      </ul>
-    
+      </InventoryStyle>
+
       {/* Displays Inventory */}
       <DisplayInventory 
         data={someInventory} 
         isError={isError} 
         handleActiveSelection={handleActiveSelection} > 
       </DisplayInventory>
-      
+
       {/* Displays Modal */}
       {showModal && 
         <ItemModalData 
@@ -92,8 +90,7 @@ const Main = () => {
           keepOpenActiveSelection={keepOpenActiveSelection} >
         </ItemModalData> 
       }
-      
-    </div>
+    </div>  
   );
   
 }

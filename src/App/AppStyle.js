@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import device from './StyledComponents/deviceSize';
 
 export default styled.div`
-  /* min-height: 10vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  justify-content: center;
   font-family: 'PT Sans Narrow', sans-serif;
   background-color: #282c34;
 
