@@ -14,7 +14,7 @@ function Capsules(props) {
         
         <ModalTitle green> Background </ModalTitle> 
         { activeSelection.status ?  
-          <ModalText> Status: {activeSelection.status} </ModalText> 
+          <ModalText> Stadtus: {activeSelection.status} </ModalText> 
           : <ModalText> Status: {activeSelection.status} </ModalText> 
         }
         { activeSelection.original_launch ?  

@@ -36,7 +36,7 @@ const Inventory = () => {
     }, [inventoryCategory, inventoryCount]
   );
 
-  const pageClick = (pageNumber) => {
+ const pageClick = (pageNumber) => {
     if (pageNumber === 1) {
       var startSlice = 0; 
       var endSlice = ITEMS_TO_DISPLAY; 
