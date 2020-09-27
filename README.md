@@ -17,11 +17,9 @@
 - [x] Part 5: Sending the solution
 
 ### Approach to the project
-- In deciding what additional funcitonality to implement I thought about what would be the most likely user need. 
-- In this aspect, filtering by name might be lower on the priority list. 
-- However, higher on the priority list would be filtering by category (capsules, cores, dragons, missions, ships). 
-- Likewise, high on the priority list from a UI perspective would be seeing a managable number of results. As such, introducing pagination and only displaying 8 items at a time are key. 
-- Finally, the API calls to each of those inventory categories was not guaranteed to return items alphabetically. Again, from a UI perspecitve I thought it was an important feature, so this is included.  
+- In deciding what additional functionality to implement I thought about the user. 
+- From this point of view, higher on the priority list would be a filtering feature, where the user can filtering by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a managable number of results. As such, there is pagination and only 8 items are displayed a time. Finally, the API calls do not return all items alphabetically, so I created a function to sort the results. 
+- While important, I did not prioritise filtering inventory by name, but I would include this on the next iteration. 
 
 ### Testing
 - Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did test that some of the React Components rendered and did some unit testing on a couple of functions. 
