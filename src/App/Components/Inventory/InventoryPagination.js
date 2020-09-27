@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../../StyledComponents/Link';
+import { LinkLarge } from '../../StyledComponents/Link';
 
 const InventoryPagination = (props) => {
   const { inventoryCategory, pages, pageClick } = props
@@ -7,9 +7,9 @@ const InventoryPagination = (props) => {
     <div>
       <h2> {inventoryCategory} </h2>
         {pages.map(pageNumber => (
-            <Link large key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
+            <LinkLarge large key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
              { pageNumber + 1 + ' '}
-            </Link>
+            </LinkLarge>
         ))} 
     </div>  
   ); 

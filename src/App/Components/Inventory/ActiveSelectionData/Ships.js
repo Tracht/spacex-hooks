@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import Link from '../../../StyledComponents/Link';
+import { Link } from '../../../StyledComponents/Link';
 import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText, ModalImage } from '../../../StyledComponents/Modal';
 
 function Ships(props) {

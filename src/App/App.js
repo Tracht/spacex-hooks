@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import AppStyle from './AppStyle';
 import Homepage from './Components/Homepage/Homepage';
-import {HomepageDiv} from './Components/Homepage/HomepageStyle';
+import { HomepageDiv } from './Components/Homepage/HomepageStyle';
 import InventoryStyle from './Components/Inventory/InventoryStyle';
 import Inventory from './Components/Inventory/Inventory';
-import Link from './StyledComponents/Link'
+import { Link } from './StyledComponents/Link'
 
 
 const App = () => {
