@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../StyledComponents/Button';
+import Button from '../../../StyledComponents/Button';
 
 
 const InventoryFilter = (props) => {

@@ -3,8 +3,8 @@ import axios from 'axios';
 import sortArray from '../../../utils';
 import DisplayInventory from './InventoryItems/DisplayInventory';
 import ItemModalData from './InventoryItems/ItemModalData';
-import InventoryFilter from './InventoryFilter';
-import InventoryPagination from './InventoryPagination';
+import InventoryFilter from './InventoryItems/InventoryFilter';
+import InventoryPagination from './InventoryItems/InventoryPagination';
 import InventoryStyle from './InventoryStyle';
 
 const INVENTORY = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
