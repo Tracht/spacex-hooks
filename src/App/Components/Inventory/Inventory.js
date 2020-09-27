@@ -3,14 +3,14 @@ import axios from 'axios';
 import sortArray from '../../../utils';
 import DisplayInventory from './InventoryItems/DisplayInventory';
 import ItemModalData from './InventoryItems/ItemModalData';
+import InventoryFilter from './InventoryFilter';
+import InventoryPagination from './InventoryPagination';
 import InventoryStyle from './InventoryStyle';
-import Button from '../../StyledComponents/Button';
-import Link from '../../StyledComponents/Link';
 
 const INVENTORY = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const ITEMS_TO_DISPLAY = 8;
 
-const Main = () => {
+const Inventory = () => {
   const [inventoryCategory, setInventoryCategory] = useState('dragons');
   const [isError, setIsError] = useState(false);
   const [allInventory, setAllInventory] = useState(null);
@@ -59,30 +59,16 @@ const Main = () => {
   return(
     <div>
       <InventoryStyle>
-      {/* Filters inventory */}
-        {INVENTORY.map(filter => (
-          <Button green key={filter} value={filter} onClick={() => setInventoryCategory(filter)} >
-            {filter}
-          </Button>
-        ))}
-
-       {/* Pagination */}
-       <h2> {inventoryCategory} </h2>
-        {pages.map(pageNumber => (
-            <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
-             { pageNumber + 1 + ' '}
-            </Link>
-        ))} 
+        <InventoryFilter INVENTORY={INVENTORY} setInventoryCategory={setInventoryCategory} /> 
+        <InventoryPagination inventoryCategory={inventoryCategory} pages={pages} pageClick={pageClick} />  
       </InventoryStyle>
 
-      {/* Displays Inventory */}
       <DisplayInventory 
         data={someInventory} 
         isError={isError} 
         handleActiveSelection={handleActiveSelection} > 
       </DisplayInventory>
 
-      {/* Displays Modal */}
       {showModal && 
         <ItemModalData 
           inventoryCategory={inventoryCategory}
@@ -94,4 +80,4 @@ const Main = () => {
   );
   
 }
-export default Main;
+export default Inventory;
