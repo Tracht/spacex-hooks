@@ -15,6 +15,8 @@ export const HomepageDiv = styled.div`
 
 export const HomepageText = styled.p`
   font-size: 0.9em;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: ${ props => props.left ? "left" : "center" };
   color: white;
   font-family: 'Open Sans', sans-serif;

@@ -7,7 +7,7 @@ const InventoryPagination = (props) => {
     <div>
       <h2> {inventoryCategory} </h2>
         {pages.map(pageNumber => (
-            <Link key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
+            <Link large key={pageNumber} onClick={() => pageClick(pageNumber + 1)} >
              { pageNumber + 1 + ' '}
             </Link>
         ))} 

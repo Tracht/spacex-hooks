@@ -8,7 +8,7 @@ const handleLinkSize = size => {
     case "small":
       return 0.9; 
     case "large":
-      return 1.3;
+      return 1.6;
     default:
       return 1.1;
   }
@@ -19,8 +19,7 @@ export default styled.a`
   text-align: center;
 
   /* font-size: calc(10px + 2vmin); */
-
-  font-size: ${({ size }) => handleLinkSize(size)}em;
+  font-size: ${ ({ size }) => handleLinkSize(size) }em;
 
   color: ${ props => props.green ? "#00cc99" : "white" };
   
