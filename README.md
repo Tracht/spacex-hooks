@@ -22,10 +22,12 @@
 - While important, I did not prioritise filtering inventory by name, but I would include this on the next iteration. 
 
 ### Testing
-- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did test that some of the React Components rendered and did some unit testing on a couple of functions. 
+- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did use Enzyme and Jest to check that some of the React Components rendered and implemented unit tests on a couple of functions (to check that pagination and sort worked correctly). 
 
 ### Oustanding tasks
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
+- I am a bit new to accessibility and SEO so I have added these to my to do list.
+- While my app is responsive across devices, I'd like to improve my implementation of responsiveness. 
 
 ### User Stories
 **Core**
@@ -43,7 +45,7 @@
 - [Axios](https://github.com/axios/axios) to make HTTP requests from node.js
 - [Styled Components](https://styled-components.com) to create tagged template literals to style React components.
 - [Jest](https://jestjs.io) for unit tests of logic and components
-- [Jest for styled components](https://github.com/styled-components/jest-styled-components)
+- [Enzyme](https://enzymejs.github.io/enzyme/)
 
 ### Installation Guide 
 - Clone or Fork the project repo. Then, start the web app in development mode from the terminal with the command `yarn start` or `npm start`. 
