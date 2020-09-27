@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e5b3e1ef-d30d-4554-850f-92bf59dbaabe/deploy-status)](https://app.netlify.com/sites/relaxed-kepler-537814/deploys)
 
-## App deployed [here](relaxed-kepler-537814.netlify.app)
+### App deployed [here](relaxed-kepler-537814.netlify.app)
 
 ### User Stories
 **Core**
