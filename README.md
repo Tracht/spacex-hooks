@@ -47,6 +47,10 @@
 - [Jest](https://jestjs.io) for unit tests of logic and components
 - [Enzyme](https://enzymejs.github.io/enzyme/)
 
+### API Calls
+- [SpaceX](https://docs.spacexdata.com)
+- An example of a call to fetch all 'capsules': https://api.spacexdata.com/v3/capsules
+
 ### Installation Guide 
 - Clone or Fork the project repo. Then, start the web app in development mode from the terminal with the command `yarn start` or `npm start`. 
 - Then view it in the browser by opening [http://localhost:3000](http://localhost:3000).
