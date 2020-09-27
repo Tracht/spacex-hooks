@@ -23,6 +23,12 @@
 - Likewise, high on the priority list from a UI perspective would be seeing a managable number of results. As such, introducing pagination and only displaying 8 items at a time are key. 
 - Finally, the API calls to each of those inventory categories was not guaranteed to return items alphabetically. Again, from a UI perspecitve I thought it was an important feature, so this is included.  
 
+### Testing
+- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did test that some of the React Components rendered and did some unit testing on a couple of functions. 
+
+### Oustanding tasks
+- Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
+
 ### User Stories
 **Core**
 * As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
