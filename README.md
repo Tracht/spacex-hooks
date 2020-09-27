@@ -11,6 +11,7 @@
   - display only 8 inventory items at a time
   - create pagination
   - sort inventory items alphabetically
+  - created a Modal to show full item details
 
 - [x] Part 3: Deploy project on Netlify 
 - [x] Part 4: Readme to explain how to run the project and justify decisions made in the process in particular Part 2 (see below)
@@ -18,7 +19,7 @@
 
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
-- From this point of view, higher on the priority list would be a filtering feature, where the user can filtering by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a managable number of results. As such, there is pagination and only 8 items are displayed a time. Finally, the API calls do not return all items alphabetically, so I created a function to sort the results. 
+- From this point of view, higher on the priority list would be a filtering feature, where the user can filtering by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a managable number of results. As such, there is pagination and only 8 items are displayed a time. Finally, the API calls do not return all items alphabetically, so I created a function to sort the results. I also implemented a modal, so that the user can see full item details. This makes it better for user readability. 
 - While important, I did not prioritise filtering inventory by name, but I would include this on the next iteration. 
 
 ### Testing
@@ -39,6 +40,7 @@
 * As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
 * As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
 * As a user, so that I can better navigate the inventory, I would like to see everything sorted alphabetically. 
+* As a user, I'd like to see an item's summary and full details. 
 
 ### TechStack 
 - [React](https://github.com/facebook/create-react-app) using functional components
