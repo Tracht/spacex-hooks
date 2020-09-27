@@ -4,7 +4,7 @@ import Button from '../../StyledComponents/Button';
 
 const InventoryFilter = (props) => {
 
-  const { INVENTORY, setInventoryCategory} = props
+  const { INVENTORY, setInventoryCategory } = props
 
   return(
     <div>

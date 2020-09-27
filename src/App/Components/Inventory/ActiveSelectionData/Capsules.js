@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
-import { ModalOverlay, ModalContent, Modal, ModalTitle } from '../../../StyledComponents/Modal';
+import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText } from '../../../StyledComponents/Modal';
 
 function Capsules(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -10,37 +10,37 @@ function Capsules(props) {
    <ModalOverlay>
     <Modal>
       <ModalContent>
-        <h1>{activeSelection.capsule_serial}</h1>
+        <ModalHeader>{activeSelection.capsule_serial}</ModalHeader>
         
-        <ModalTitle green center> Background </ModalTitle> 
+        <ModalTitle green> Background </ModalTitle> 
         { activeSelection.status ?  
-          <p> Status: {activeSelection.status} </p> 
-          : <p> Status: {activeSelection.status} </p> 
+          <ModalText> Status: {activeSelection.status} </ModalText> 
+          : <ModalText> Status: {activeSelection.status} </ModalText> 
         }
         { activeSelection.original_launch ?  
-          <p> Original launch: {activeSelection.original_launch} </p> 
-          : <p> Original launch: Has not been launched </p>
+          <ModalText> Original launch: {activeSelection.original_launch} </ModalText> 
+          : <ModalText> Original launch: Has not been launched </ModalText>
         }
         {/* Had to use ? instead of && because a value of '0' will not display "Re-use count" */}
         { activeSelection.reuse_count ?  
-          <p> Re-use count: {activeSelection.reuse_count} </p> 
-          : <p> Re-use count: {activeSelection.reuse_count} </p> 
+          <ModalText> Re-use count: {activeSelection.reuse_count} </ModalText> 
+          : <ModalText> Re-use count: {activeSelection.reuse_count} </ModalText> 
         }
         { activeSelection.details ? 
-          <p> Details: {activeSelection.details} </p> 
-          : <p>Details: No details provided.</p>
+          <ModalText> Details: {activeSelection.details} </ModalText> 
+          : <ModalText>Details: No details provided.</ModalText>
         }
 
-        { activeSelection.missions ? <ModalTitle green center> Missions </ModalTitle> : null }  
+        { activeSelection.missions ? <ModalTitle green> Missions </ModalTitle> : null }  
         { activeSelection.missions[0] ? 
             activeSelection.missions.map((item) => {
               return (
                 <div key={item.name} >
-                  <p>Name: {item.name}</p>
-                  <p>Flight: {item.flight}</p>
+                  <ModalText>Name: {item.name}</ModalText>
+                  <ModalText>Flight: {item.flight}</ModalText>
                 </div>  
               )}) 
-            : <p>No missions</p>
+            : <ModalText>No missions</ModalText>
         }
         <br></br>
         <Button green onClick={keepOpenActiveSelection} type="submit" >

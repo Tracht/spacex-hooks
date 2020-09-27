@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '../../StyledComponents/Link';
 
 const InventoryPagination = (props) => {
-  const { inventoryCategory, pages, pageClick} = props
+  const { inventoryCategory, pages, pageClick } = props
   return(
     <div>
       <h2> {inventoryCategory} </h2>

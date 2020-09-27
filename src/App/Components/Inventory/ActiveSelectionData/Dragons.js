@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
 import Link from '../../../StyledComponents/Link';
-import { ModalOverlay, ModalContent, Modal, ModalTitle, ModalImage } from '../../../StyledComponents/Modal';
+import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText, ModalImage } from '../../../StyledComponents/Modal';
 
 function Dragons(props) {
   const { activeSelection, keepOpenActiveSelection} = props
@@ -11,7 +11,7 @@ function Dragons(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <h1>{ activeSelection.name }</h1>
+          <ModalHeader>{ activeSelection.name }</ModalHeader>
           
               { activeSelection.flickr_images && 
                 activeSelection.flickr_images.map((photo) => {
@@ -20,53 +20,53 @@ function Dragons(props) {
                   )})
               }
 
-          <ModalTitle green center> Background </ModalTitle>
-          { activeSelection.active ? <p> Active </p> : <p> Not Active </p> }
+          <ModalTitle green> Background </ModalTitle>
+          { activeSelection.active ? <ModalText> Active </ModalText> : <ModalText> Not Active </ModalText> }
           { activeSelection.crew_capacity ? 
-            <p> Crew capacity: {activeSelection.crew_capacity} </p> 
-            : <p> Crew capacity: 0 </p> 
+            <ModalText> Crew capacity: {activeSelection.crew_capacity} </ModalText> 
+            : <ModalText> Crew capacity: 0 </ModalText> 
           }
           { activeSelection.dry_mass_kg && activeSelection.dry_mass_lb && 
-            <p> Dry mass: {activeSelection.dry_mass_kg}kg / {activeSelection.dry_mass_lb}lbs </p> 
+            <ModalText> Dry mass: {activeSelection.dry_mass_kg}kg / {activeSelection.dry_mass_lb}lbs </ModalText> 
           }
           { activeSelection.orbit_duration_yr ? 
-            <p> Duration in orbit: {activeSelection.orbit_duration_yr} years </p> 
-            : <p> Duration in orbit: No information provided </p>
+            <ModalText> Duration in orbit: {activeSelection.orbit_duration_yr} years </ModalText> 
+            : <ModalText> Duration in orbit: No information provided </ModalText>
           }
-          { activeSelection.first_flight ? <p> First flight: {activeSelection.first_flight} </p> 
-            : <p> First flight: No information provided </p>
+          { activeSelection.first_flight ? <ModalText> First flight: {activeSelection.first_flight} </ModalText> 
+            : <ModalText> First flight: No information provided </ModalText>
           }
 
-          { activeSelection.heat_shield ? <ModalTitle green center> Heat Shield </ModalTitle> : null }
+          { activeSelection.heat_shield ? <ModalTitle green> Heat Shield </ModalTitle> : null }
           { activeSelection.heat_shield.material ? 
-            <p> Material: { activeSelection.heat_shield.material } </p> 
-            : <p> Material: No information provided</p>
+            <ModalText> Material: { activeSelection.heat_shield.material } </ModalText> 
+            : <ModalText> Material: No information provided</ModalText>
           }
           { activeSelection.heat_shield.size_meters ? 
-            <p> Size: { activeSelection.heat_shield.size_meters } meters </p> 
-            : <p> Size: No information provided</p>
+            <ModalText> Size: { activeSelection.heat_shield.size_meters } meters </ModalText> 
+            : <ModalText> Size: No information provided</ModalText>
           }
           { activeSelection.heat_shield.temp_degrees ? 
-            <p> Max temperature: { activeSelection.heat_shield.temp_degrees } C </p> 
-            : <p>Max temperature: No information provided</p>
+            <ModalText> Max temperature: { activeSelection.heat_shield.temp_degrees } C </ModalText> 
+            : <ModalText>Max temperature: No information provided</ModalText>
           }
           { activeSelection.heat_shield.dev_partner ? 
-            <p> Development Partner: { activeSelection.heat_shield.dev_partner } </p> 
-            : <p>Development partner: No information provided</p>
+            <ModalText> Development Partner: { activeSelection.heat_shield.dev_partner } </ModalText> 
+            : <ModalText>Development partner: No information provided</ModalText>
           }
           
-          { activeSelection.thrusters ? <ModalTitle green center> Thrusters </ModalTitle> : null }
+          { activeSelection.thrusters ? <ModalTitle green> Thrusters </ModalTitle> : null }
           { activeSelection.thrusters ? 
             activeSelection.thrusters.map((item) => {
               return (
                 <div key={item.type} >
-                  <p> Type: {item.type}</p>
-                  <p> Number of thrusters: {item.amount}</p>
-                  <p> Pods: {item.pods}</p>
-                  <p> Fuel type 1: {item.fuel_1}</p>
-                  <p> Fuel type 2: {item.fuel_2}</p>
+                  <ModalText> Type: {item.type}</ModalText>
+                  <ModalText> Number of thrusters: {item.amount}</ModalText>
+                  <ModalText> Pods: {item.pods}</ModalText>
+                  <ModalText> Fuel type 1: {item.fuel_1}</ModalText>
+                  <ModalText> Fuel type 2: {item.fuel_2}</ModalText>
                 </div>  
-            )}) : <p> No thrusters </p>
+            )}) : <ModalText> No thrusters </ModalText>
           } 
 
           { activeSelection.wikipedia ? <ModalTitle green center> Learn more </ModalTitle> : null }

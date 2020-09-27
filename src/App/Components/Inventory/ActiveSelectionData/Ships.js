@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
 import Link from '../../../StyledComponents/Link';
-import { ModalOverlay, ModalContent, Modal, ModalTitle, ModalImage } from '../../../StyledComponents/Modal';
+import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText, ModalImage } from '../../../StyledComponents/Modal';
 
 function Ships(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -11,49 +11,49 @@ function Ships(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <h1>{ activeSelection.ship_name }</h1>
+          <ModalHeader>{ activeSelection.ship_name }</ModalHeader>
           { activeSelection.image && 
             <ModalImage src={activeSelection.image} alt={activeSelection.ship_name} width="300" height="250"> 
             </ModalImage> 
           }  
-          <ModalTitle green center> Background </ModalTitle>
+          <ModalTitle green> Background </ModalTitle>
           { activeSelection.ship_type ? 
-            <p> Ship type: {activeSelection.ship_type} </p> 
-            : <p>Ship type: No information provided</p>
+            <ModalText> Ship type: {activeSelection.ship_type} </ModalText> 
+            : <ModalText>Ship type: No information provided</ModalText>
           } 
           { activeSelection.active ? 
-            <p> Active </p> 
-            : <p> Not Active </p>
+            <ModalText> Active </ModalText> 
+            : <ModalText> Not Active </ModalText>
           } 
           { activeSelection.year_built ? 
-            <p>Year built: {activeSelection.year_built} </p> 
-            : <p>Year built: No information provided</p>
+            <ModalText>Year built: {activeSelection.year_built} </ModalText> 
+            : <ModalText>Year built: No information provided</ModalText>
           } 
           { activeSelection.home_port ? 
-            <p>Home port: {activeSelection.home_port} </p> 
-            : <p>Home port: No information provided</p>
+            <ModalText>Home port: {activeSelection.home_port} </ModalText> 
+            : <ModalText>Home port: No information provided</ModalText>
           } 
           { activeSelection.successful_landings ? 
-            <p>Successful landings: {activeSelection.successful_landings} </p> 
-            : <p>Sucessful landings: No information provided</p>
+            <ModalText>Successful landings: {activeSelection.successful_landings} </ModalText> 
+            : <ModalText>Sucessful landings: No information provided</ModalText>
           } 
           { activeSelection.attempted_landings ? 
-            <p>Attempted landings: {activeSelection.attempted_landings} </p> 
-            : <p>Attempted landings: No information provided</p>
+            <ModalText>Attempted landings: {activeSelection.attempted_landings} </ModalText> 
+            : <ModalText>Attempted landings: No information provided</ModalText>
           } 
 
-          { activeSelection.roles ? <ModalTitle green center> Roles </ModalTitle> : null }
+          { activeSelection.roles ? <ModalTitle green> Roles </ModalTitle> : null }
           { activeSelection.roles ? 
             activeSelection.roles.map((item) => {
               return (
                 <div>
-                  <p key={item} > {item}</p>
+                  <ModalText key={item}> {item} </ModalText>
                 </div>
                )}) 
-               : <p> No role information available </p>
+               : <ModalText> No role information available </ModalText>
           }
 
-          { activeSelection.url ? <ModalTitle green center>Learn more </ModalTitle> : null }
+          { activeSelection.url ? <ModalTitle green>Learn more </ModalTitle> : null }
           { activeSelection.url && <Link href={activeSelection.url} > Website </Link> } 
           
           <br></br>

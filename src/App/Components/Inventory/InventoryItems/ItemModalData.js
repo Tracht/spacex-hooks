@@ -7,8 +7,6 @@ import Ships from '../ActiveSelectionData/Ships';
 
 function ItemModalData(props) {
   const { inventoryCategory, activeSelection, keepOpenActiveSelection } = props
-
-  console.log("Item Modal Data", "Active selection", activeSelection, "keepOpen:", keepOpenActiveSelection)
   
   if ( activeSelection ) {
     if ( inventoryCategory === 'capsules' ) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../../StyledComponents/Button';
 import Link from '../../../StyledComponents/Link';
-import {ModalOverlay, ModalContent, Modal, ModalTitle} from '../../../StyledComponents/Modal';
+import {ModalOverlay, ModalContent, ModalHeader, Modal, ModalTitle, ModalText } from '../../../StyledComponents/Modal';
 
 function Missions(props) {
   const { activeSelection, keepOpenActiveSelection } = props
@@ -11,32 +11,32 @@ function Missions(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <h1>{ activeSelection.mission_name }</h1>
+          <ModalHeader>{ activeSelection.mission_name }</ModalHeader>
 
-          <ModalTitle green center> Background </ModalTitle>
-          <p>{ activeSelection.description }</p>
+          <ModalTitle green> Background </ModalTitle>
+          <ModalText>{ activeSelection.description }</ModalText>
           
           { activeSelection.manufacturers ? <ModalTitle green center> Manufacturers </ModalTitle> : null }
           { activeSelection.manufacturers ? 
             activeSelection.manufacturers.map((item) => {
               return (
                 <div>
-                  <p key={item}> {item} </p>
+                  <ModalText> key={item}> {item} </ModalText>
                 </div>
-              )}) : <p> No manufacturers </p>
+              )}) : <ModalText> No manufacturers </ModalText>
           }    
 
-          { activeSelection.payload_ids ? <ModalTitle green center> Payloads </ModalTitle> : null }
+          { activeSelection.payload_ids ? <ModalTitle green> Payloads </ModalTitle> : null }
           { activeSelection.payload_ids[0] ?
             activeSelection.payload_ids.map((item) => {
               return (
                 <div>
-                  <p key={item}> {item} </p> 
+                  <ModalText key={item}> {item} </ModalText> 
                 </div>
-            )}) : <p> No Payloads </p>
+            )}) : <ModalText> No Payloads </ModalText>
           }
 
-          { activeSelection.wikipedia || activeSelection.website || activeSelection.twitter ?  <ModalTitle green center> Learn more </ModalTitle> : null }
+          { activeSelection.wikipedia || activeSelection.website || activeSelection.twitter ?  <ModalTitle green> Learn more </ModalTitle> : null }
           { activeSelection.wikipedia && <Link href={activeSelection.wikipedia} > Wikipedia </Link> } <br></br>
           { activeSelection.website && <Link href={activeSelection.website} > Website </Link> } <br></br>
           { activeSelection.twitter && <Link href={activeSelection.twitter} > Twitter </Link> } <br></br>

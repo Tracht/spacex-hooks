@@ -34,17 +34,24 @@ export const Modal = styled.div`
   max-width: 100%;
 `;
 
+export const ModalHeader = styled.h1`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  text-align: ${ props => props.left ? "left" : "center" };
+  color: ${ props => props.green ? "#00cc99" : "white" };
+`
+
 export const ModalTitle = styled.h2`
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1em;
-  text-align: ${ props => props.center ? "center" : "left" };
+  text-align: ${ props => props.left ? "left" : "center" };
   color: ${ props => props.green ? "#00cc99" : "white" };
 `
 
 export const ModalText = styled.p`
   font-size: 0.9em;
-  text-align: ${ props => props.center ? "center" : "left" };
-  color: "#00cc99";
+  text-align: ${ props => props.left ? "left" : "center" };
+  color: white;
   font-family: 'Open Sans', sans-serif;
 `
 
