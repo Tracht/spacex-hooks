@@ -18,7 +18,7 @@
 
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
-- From this point of view, higher on the priority list would be a filtering feature, where the user can filtering by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a managable number of results. As such, there is pagination and only 8 items are displayed a time. Finally, the API calls do not return all items alphabetically, so I created a function to sort the results. I also implemented a modal, so that the user can see full item details. This makes it better for user readability. 
+- From this point of view, higher on the priority list would be a filtering feature, where the user can filter by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a manageable number of results. As such, there is pagination and only 8 items are displayed at a time. Finally, the API calls do not return items alphabetically, so I created a function to alphabetise the results. I also implemented a modal, so that the user can see both an initial summary on the screen, and if they're interested in learning more, they can click to see full item details. 
 - While important, I did not prioritise filtering inventory by name, but I would include this on the next iteration. 
 
 ### Testing
