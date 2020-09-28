@@ -15,7 +15,6 @@
 
 - [x] Part 3: Deploy project on Netlify 
 - [x] Part 4: Readme to explain how to run the project and justify decisions made in the process in particular Part 2 (see below)
-- [x] Part 5: Sending the solution
 
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
