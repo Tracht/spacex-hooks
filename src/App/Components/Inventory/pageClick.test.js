@@ -11,7 +11,7 @@ const pageClickA = (pageNumber) => {
     endSlice = (ITEMS_TO_DISPLAY * pageNumber); 
   }
   return (inventoryOfItemsA.slice(startSlice, endSlice));
-} 
+}; 
 
 const pageClickB = (pageNumber) => {
   if (pageNumber === 1) {
@@ -22,25 +22,26 @@ const pageClickB = (pageNumber) => {
     endSlice = (ITEMS_TO_DISPLAY * pageNumber); 
   }
   return (inventoryOfItemsB.slice(startSlice, endSlice));
-} 
+};
 
-describe('pageClickA', ()=> {
+describe('when there are 10 items in the array', ()=> {
   const page1 = [1, 2, 3, 4, 5, 6, 7, 8];
   const page2 = [9, 10];
 
-  it('displays items 1-8 when user clicks on page 1', ()=> {
+  it('clicking on page1 shows items 1-8', ()=> {
     expect(pageClickA(1)).toEqual(page1);
   });
 
-  it('displays items 9-10 when user clicks on page 2', ()=> {
+  it('clicking on page 2 shows items 9-10', ()=> {
     expect(pageClickA(2)).toEqual(page2);
   });
 
 })
 
-describe('pageClickB', ()=> {
+describe('when there is 1 item in the array', ()=> {
   const page1 = [1]
-  it('displays 1 item when user clicks on page 1', ()=> {
+  it('clicking on page 1 displays 1 item', ()=> {
     expect(pageClickB(1)).toEqual(page1);
   });
-})
+
+});
