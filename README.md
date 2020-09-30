@@ -11,7 +11,7 @@
   - display only 8 inventory items at a time
   - create pagination
   - sort inventory items alphabetically
-  - created a Modal to show full item details
+  - created a Modal to show a particular inventory item's full list of details
 
 - [x] Part 3: Deploy project on Netlify 
 - [x] Part 4: Readme to explain how to run the project and justify decisions made in the process in particular Part 2 (see below)
