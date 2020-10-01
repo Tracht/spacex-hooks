@@ -21,7 +21,8 @@
 - While important, I did not prioritise filtering the inventory by the item's name, but I would include this on the next iteration. 
 
 ### Testing
-- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did use Enzyme and Jest to check that some of the React Components rendered and implemented unit tests on a couple of functions (to check that pagination and sort worked correctly). 
+- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. There seems to be quite a few approaches. I experimented with Enzyme and Jest to check that some of the React Components rendered. I also implemented unit tests on a couple of functions, specifically to check that pagination and sortAtoZ worked correctly. I realise now that there is a different approach to testing React Hooks, so I will be updating my unit test for pagination accordingly. 
+- I wanted to implement Cypress for end-to-end testing, but this seemed to be a bit difficult when using Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. I am currently updating my tests to take this into account.
 
 ### Oustanding tasks
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
