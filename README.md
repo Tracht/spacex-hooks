@@ -33,11 +33,11 @@
 - While important, I did not prioritise filtering the inventory by the item's name, but I would include this on the next iteration. 
 
 ### Testing
-- In summary, I have implemented a mix of Jest / Enzyme unit tests and Cypress integration tests.
-- There seems to be quite a few approaches to testing React components which range from snapshot testing for styling to various unit and integration tests. Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing) which outlines what I think are the important aspects to test. 
+- In summary, I have implemented a mix of Cypress integration tests and Jest / Enzyme unit tests.
+- There seems to be quite a few approaches to testing React components which range from snapshot testing for styling to unit and integration tests. Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing) which outlines what I think are the important aspects to test. 
 - I experimented with Enzyme and Jest unit tests to check that some of the React Components rendered. I am not quite familiar with Enzyme/Jest unit testing of React Components, so this is something I will be working on in the next few days.  
 - I also implemented unit tests on a couple of functions, specifically to check that pagination and sortAtoZ functions worked correctly. I realise that there is a different approach to testing React Hooks, so I will be updating my unit test for pagination accordingly. 
-- I used Cypress for end-to-end testing, which initially I was unsure how to do with Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. I am currently updating my tests to take this into account.
+- I used Cypress for end-to-end testing, which initially I was unsure how to do with Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. 
 
 ### To run the tests.
 - For Jest unit testing
