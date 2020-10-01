@@ -21,8 +21,18 @@
 - While important, I did not prioritise filtering the inventory by the item's name, but I would include this on the next iteration. 
 
 ### Testing
-- Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. There seems to be quite a few approaches. I experimented with Enzyme and Jest to check that some of the React Components rendered. I also implemented unit tests on a couple of functions, specifically to check that pagination and sortAtoZ worked correctly. I realise now that there is a different approach to testing React Hooks, so I will be updating my unit test for pagination accordingly. 
-- I wanted to implement Cypress for end-to-end testing, but this seemed to be a bit difficult when using Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. I am currently updating my tests to take this into account.
+- In summary, I have implemented a mix of Jest / Enzyme unit tests and Cypress integration tests.
+- There seems to be quite a few approaches to testing React components which range from snapshot testing for styling to various unit and integration tests. Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing) which outlines what I think are the important aspects to test. 
+- I experimented with Enzyme and Jest unit tests to check that some of the React Components rendered. I am not quite familiar with Enzyme/Jest unit testing of React Components, so this is something I will be working on in the next few days.  
+- I also implemented unit tests on a couple of functions, specifically to check that pagination and sortAtoZ functions worked correctly. I realise that there is a different approach to testing React Hooks, so I will be updating my unit test for pagination accordingly. 
+- I used Cypress for end-to-end testing, which initially I was unsure how to do with Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. I am currently updating my tests to take this into account.
+
+### To run the tests.
+- For Jest unit testing
+  - In the terminal type: `yarn test` or `npm test`. Then type 'a' to run all tests.
+- For Cypress integration testing
+  - In one terminal, start the app with the command `npm start`.
+  - In a second terminal, start cypress with the command `npx cypress open`.
 
 ### Oustanding tasks
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
@@ -47,6 +57,7 @@
 - [Styled Components](https://styled-components.com) to create tagged template literals to style React components.
 - [Jest](https://jestjs.io) for unit tests of logic and components
 - [Enzyme](https://enzymejs.github.io/enzyme/)
+- [Cypress](https://www.cypress.io)
 
 ### API Calls
 - [SpaceX](https://docs.spacexdata.com)
@@ -56,9 +67,6 @@
 - Clone or Fork the project repo. Then, start the web app in development mode from the terminal with the command `yarn start` or `npm start`. 
 - Then view it in the browser by opening [http://localhost:3000](http://localhost:3000).
   
-### To run the tests.
-- From the terminal type: `yarn test` or `npm test`.
-
 ### To create the build
 - To create the build, run `yarn build` or `npm build`. 
   - It builds the app for production to the `build` folder. 
