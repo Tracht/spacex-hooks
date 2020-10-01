@@ -26,7 +26,7 @@
 ### Oustanding tasks
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
 - I am a bit new to accessibility and SEO so I have added these to my to do list.
-- While my app is responsive across devices, I'd like to improve my implementation of responsiveness. 
+- While my app is responsive across devices, I'd like to improve my implementation to reflect best practices. 
 
 ### User Stories
 **Core**
