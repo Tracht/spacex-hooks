@@ -22,10 +22,10 @@
   - Page loads in a sensible amount of time
 
 **Extras** 
-* As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
+* As a user, so that I can get an overview of SpaceX's projects, I would like to see different categories of their inventory.
 * As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
 * As a user, so that I can better navigate the inventory, I would like to see everything sorted alphabetically. 
-* As a user, I'd like to see an item's summary and full details. 
+* As a user, I'd like to have a choice to see both an item's complete and summary information. 
 
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
