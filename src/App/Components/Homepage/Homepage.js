@@ -24,8 +24,8 @@ const Homepage = () => {
   return (
     <div>
         <Image src="spacex-logo.png" alt="SpaceX logo" ></Image>
-          <HomepageText> {quote} </HomepageText>
-        <Button onClick={nextQuote} > get Elon's wisdom </Button>
+          <HomepageText data-cy='elon-quote'> {quote} </HomepageText>
+        <Button onClick={nextQuote} data-cy='next-elon-quote'> get Elon's wisdom </Button>
     </div>
   )
 }
