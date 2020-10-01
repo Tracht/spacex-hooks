@@ -10,16 +10,16 @@ function Cores(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <ModalHeader>{activeSelection.core_serial}</ModalHeader>
+          <ModalHeader data-cy='item-name'>{activeSelection.core_serial}</ModalHeader>
           
-          <ModalTitle green> Background </ModalTitle>
+          <ModalTitle green data-cy='background'> Background </ModalTitle>
           { activeSelection.status ? 
             <ModalText> Status: {activeSelection.status } </ModalText> 
             : <ModalText> Status: {activeSelection.status } </ModalText> 
           }
           { activeSelection.original_launch ? 
-            <ModalText> Original launch: {activeSelection.original_launch } </ModalText> 
-            : <ModalText>Original launch: Has not been launched.</ModalText>
+            <ModalText data-cy='launch-true'> Original launch: {activeSelection.original_launch } </ModalText> 
+            : <ModalText data-cy='launch-false'>Original launch: Has not been launched.</ModalText>
           }
           { activeSelection.reuse_count ? 
             <ModalText> Re-use count: {activeSelection.reuse_count } </ModalText> 
@@ -46,7 +46,7 @@ function Cores(props) {
               : <ModalText>No missions</ModalText>
           }
           <br></br>
-          <Button green onClick={keepOpenActiveSelection} type="submit" >
+          <Button green onClick={keepOpenActiveSelection} type="submit" data-cy='close-modal'>
             Close
           </Button>
           <br></br>

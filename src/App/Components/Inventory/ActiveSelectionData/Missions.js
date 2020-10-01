@@ -11,7 +11,7 @@ function Missions(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <ModalHeader>{ activeSelection.mission_name }</ModalHeader>
+          <ModalHeader data-cy='item-name'>{ activeSelection.mission_name }</ModalHeader>
 
           <ModalTitle green> Background </ModalTitle>
           <ModalText>{ activeSelection.description }</ModalText>
@@ -41,7 +41,7 @@ function Missions(props) {
           { activeSelection.website && <Link href={activeSelection.website} > Website </Link> } <br></br>
           { activeSelection.twitter && <Link href={activeSelection.twitter} > Twitter </Link> } <br></br>
           
-          <Button green onClick={keepOpenActiveSelection} type="submit" >
+          <Button green onClick={keepOpenActiveSelection} type="submit" data-cy='close-modal'>
             Close
           </Button>
           <br></br>

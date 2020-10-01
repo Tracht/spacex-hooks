@@ -10,9 +10,9 @@ function Capsules(props) {
    <ModalOverlay>
     <Modal>
       <ModalContent>
-        <ModalHeader>{activeSelection.capsule_serial}</ModalHeader>
+        <ModalHeader data-cy='item-name'>{activeSelection.capsule_serial}</ModalHeader>
         
-        <ModalTitle green> Background </ModalTitle> 
+        <ModalTitle green data-cy='background'> Background </ModalTitle> 
         { activeSelection.status ?  
           <ModalText> Stadtus: {activeSelection.status} </ModalText> 
           : <ModalText> Status: {activeSelection.status} </ModalText> 
@@ -43,7 +43,7 @@ function Capsules(props) {
             : <ModalText>No missions</ModalText>
         }
         <br></br>
-        <Button green onClick={keepOpenActiveSelection} type="submit" >
+        <Button green onClick={keepOpenActiveSelection} type="submit" data-cy='close-modal'>
           Close
         </Button>
         <br></br>

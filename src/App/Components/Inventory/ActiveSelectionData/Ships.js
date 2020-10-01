@@ -11,7 +11,7 @@ function Ships(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <ModalHeader>{ activeSelection.ship_name }</ModalHeader>
+          <ModalHeader data-cy='item-name'>{ activeSelection.ship_name }</ModalHeader>
           { activeSelection.image && 
             <ModalImage src={activeSelection.image} alt={activeSelection.ship_name} width="300" height="250"> 
             </ModalImage> 
@@ -57,7 +57,7 @@ function Ships(props) {
           { activeSelection.url && <Link href={activeSelection.url} > Website </Link> } 
           
           <br></br>
-          <Button green onClick={keepOpenActiveSelection} type="submit" >
+          <Button green onClick={keepOpenActiveSelection} type="submit" data-cy='close-modal'>
             Close
           </Button>
           <br></br>

@@ -11,9 +11,9 @@ function ItemsAll(props) {
       { data && 
         <CardsContainer>
             {data.map(item => (
-                <CardWrapper key={ item.id | item.capsule_serial | item.core_serial | item.mission_id | item.ship_id }>
-                  <CardContentWrapper>
-                    <CardTitle> 
+                <CardWrapper key={ item.id | item.capsule_serial | item.core_serial | item.mission_id | item.ship_id } >
+                  <CardContentWrapper >
+                    <CardTitle data-cy='item-title'> 
                       { item.name } 
                       { item.capsule_serial }
                       { item.core_serial }
@@ -21,12 +21,16 @@ function ItemsAll(props) {
                       { item.ship_name }
                     </CardTitle>
                     <CardText> 
-                      {/* { item.description ? item.description.substring(0,200) + `...` : null } 
+                      {/* { item.description ? item.description.substring(0,200) + `...` : null }
                       { item.details ? item.details.substring(0,200) + `...` : null }  */}
                       { item.description ? item.description : null } 
                       { item.details ? item.details : null } 
                     </CardText>
-                    <Link green onClick={ () => handleActiveSelection(item, true) } href="#">
+
+                    <Link 
+                      green onClick={ () => handleActiveSelection(item, true) } href="#" 
+                      data-cy-link={item.id | item.capsule_serial | item.core_serial | item.mission_id | item.ship_id}
+                    >
                         Learn more 
                     </Link>
                 </CardContentWrapper>

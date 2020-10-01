@@ -11,7 +11,7 @@ function Dragons(props) {
     <ModalOverlay>
       <Modal>
         <ModalContent>
-          <ModalHeader>{ activeSelection.name }</ModalHeader>
+          <ModalHeader data-cy='item-name'>{ activeSelection.name }</ModalHeader>
           
               { activeSelection.flickr_images && 
                 activeSelection.flickr_images.map((photo) => {
@@ -73,7 +73,7 @@ function Dragons(props) {
           { activeSelection.wikipedia && <Link href={activeSelection.wikipedia} > Wikipedia </Link> } 
           
           <br></br>
-          <Button green onClick={keepOpenActiveSelection} type="submit" >
+          <Button green onClick={keepOpenActiveSelection} type="submit" data-cy='close-modal'>
             Close
           </Button>
           <br></br>

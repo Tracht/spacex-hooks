@@ -2,7 +2,7 @@
 
 // check that 'explore our inventory' link takes user to correct page
 
-context('Homepage Quotes', () => {
+context('Inventory Component', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
   })
@@ -13,6 +13,7 @@ context('Homepage Quotes', () => {
       cy.get('[data-cy=see-homepage-link]').contains('Go to homepage')
       cy.get('[data-cy=see-homepage-link]').click()
       cy.get('[data-cy=elon-quote]').contains('Where are the aliens?')
+      cy.get('[data-cy=see-inventory-link]').contains('Explore our inventory')
     });
   })
 
