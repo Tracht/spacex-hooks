@@ -11,15 +11,14 @@
   - display only 8 inventory items at a time
   - create pagination
   - sort inventory items alphabetically
-  - created a Modal to show a particular inventory item's full list of details
-
-- [x] Part 3: Deploy project on Netlify 
+  - created a Modal to show an item's full details
+- [x] Part 3: Deploy project (Netlify)
 - [x] Part 4: Readme to explain how to run the project and justify decisions made in the process in particular Part 2 (see below)
 
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
-- From this point of view, higher on the priority list would be a filtering feature, where the user can filter by category (capsules, cores, dragons, missions, ships). Likewise, high on the priority list from a user perspective would be seeing a manageable number of results. As such, there is pagination and only 8 items are displayed at a time. Finally, the API calls do not return items alphabetically, so I created a function to alphabetise the results. I also implemented a modal, so that the user can see both an initial summary on the screen, and if they're interested in learning more, they can click to see full item details. 
-- While important, I did not prioritise filtering inventory by name, but I would include this on the next iteration. 
+- From this point of view, high on the priority list is a filter enaling the user to filter inventory by category (capsules, cores, dragons, missions, ships). Likewise, the user would not want to be overwhelmed by the volume of inventory items, but rather see  manageable number of results. As such, I implemented pagination and only 8 items are displayed at a time. Again, to help the user navigate the inventory, I implemented a sort function, as this is not provided in the API calls. I also implemented a modal, so that the user can see both an initial summary about the item, and if they're interested in learning more, they can click 'learn more' to get full details. 
+- While important, I did not prioritise filtering the inventory by the item's name, but I would include this on the next iteration. 
 
 ### Testing
 - Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing). I am not quite familiar with testing React Components, so this is something I will be working on in the next few days. However, I did use Enzyme and Jest to check that some of the React Components rendered and implemented unit tests on a couple of functions (to check that pagination and sort worked correctly). 
