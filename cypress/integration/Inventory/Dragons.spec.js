@@ -2,7 +2,7 @@
 
 // check that 'explore our inventory' link takes user to correct page
 
-context('Dragons Inventory List', () => {
+context('Dragons', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
     cy.get('[data-cy=see-inventory-link]').click()
@@ -29,6 +29,7 @@ context('Dragons Inventory List', () => {
       cy.get('[data-cy-link]').eq(0).click() // selects the first element, which is Dragon 1
       cy.get('[data-cy=item-name]').contains('Dragon 1')
       cy.get('[data-cy=close-modal]').click()
+
       cy.get('[data-cy=item-title]').contains('Dragon 1')
       cy.get('[data-cy=item-title]').contains('Dragon 2')
       cy.get('[data-cy=pagination-link]').contains('1')
