@@ -15,6 +15,18 @@
 - [x] Part 3: Deploy project (Netlify)
 - [x] Part 4: Readme to explain how to run the project and justify decisions made in the process in particular Part 2 (see below)
 
+### User Stories
+**Core**
+* As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
+  - Acceptance criteria: a list of suppliers is displayed with key information shown
+  - Page loads in a sensible amount of time
+
+**Extras** 
+* As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
+* As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
+* As a user, so that I can better navigate the inventory, I would like to see everything sorted alphabetically. 
+* As a user, I'd like to see an item's summary and full details. 
+
 ### Approach to the project
 - In deciding what additional functionality to implement I thought about the user. 
 - From this point of view, high on the priority list is a filter enaling the user to filter inventory by category (capsules, cores, dragons, missions, ships). Likewise, the user would not want to be overwhelmed by the volume of inventory items, but rather see  manageable number of results. As such, I implemented pagination and only 8 items are displayed at a time. Again, to help the user navigate the inventory, I implemented a sort function, as this is not provided in the API calls. I also implemented a modal, so that the user can see both an initial summary about the item, and if they're interested in learning more, they can click 'learn more' to get full details. 
@@ -38,18 +50,6 @@
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
 - I am a bit new to accessibility and SEO so I have added these to my to do list.
 - While my app is responsive across devices, I'd like to improve my implementation to reflect best practices. 
-
-### User Stories
-**Core**
-* As a user, I want to see SpaceX's inventory before I sign up so that I get a good idea of their capability. 
-  - Acceptance criteria: a list of suppliers is displayed with key information shown
-  - Page loads in a sensible amount of time
-
-**Extras** 
-* As a user, so that I can get an overview of their projects, I would like to filter their inventory by categories.
-* As a user, so that I am not overloaded with information, I would like to see 8 items on display, at a time. 
-* As a user, so that I can better navigate the inventory, I would like to see everything sorted alphabetically. 
-* As a user, I'd like to see an item's summary and full details. 
 
 ### TechStack 
 - [React](https://github.com/facebook/create-react-app) using functional components
