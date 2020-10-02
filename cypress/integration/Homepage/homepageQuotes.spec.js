@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
 // check that quotes are shown in the correct order
 
-context('Homepage Quotes', () => {
+describe("Homepage Quotes", () => {
+  
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/'); // we can omit the base url, it is in the cypress.json file
   })
 
   it('On homepage, first quote displayed is: `Where are the aliens?`', () => {
@@ -23,3 +24,6 @@ context('Homepage Quotes', () => {
   })
 
 })
+
+
+ 
