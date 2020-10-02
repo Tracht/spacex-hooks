@@ -6,7 +6,6 @@ import InventoryStyle from './Components/Inventory/InventoryStyle';
 import Inventory from './Components/Inventory/Inventory';
 import { Link } from './StyledComponents/Link'
 
-
 const App = () => {
   const [showHomePage, setHomePage] = useState(true);
 
