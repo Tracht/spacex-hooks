@@ -57,7 +57,7 @@ const Inventory = () => {
   }
 
   return(
-    <div>
+    <>
       <InventoryStyle>
         <InventoryFilter INVENTORY={INVENTORY} setInventoryCategory={setInventoryCategory} /> 
         <InventoryPagination inventoryCategory={inventoryCategory} pages={pages} pageClick={pageClick} />  
@@ -76,7 +76,7 @@ const Inventory = () => {
           keepOpenActiveSelection={keepOpenActiveSelection} >
         </ItemModalData> 
       }
-    </div>  
+    </>  
   );
   
 }
