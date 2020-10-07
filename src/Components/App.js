@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import AppStyle from './AppStyle';
-import Homepage from './Components/Homepage/Homepage';
-import { HomepageDiv } from './Components/Homepage/HomepageStyle';
-import InventoryStyle from './Components/Inventory/InventoryStyle';
-import Inventory from './Components/Inventory/Inventory';
-import { Link } from './Components/StyledComponents/Link'
+import Homepage from './Homepage/Homepage';
+import { HomepageDiv } from './Homepage/HomepageStyle';
+import InventoryStyle from './Inventory/InventoryStyle';
+import Inventory from './Inventory/Inventory';
+import { Link } from './StyledComponents/Link'
 
 const App = () => {
   const [showHomePage, setHomePage] = useState(true);

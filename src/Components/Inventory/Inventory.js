@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import sortArray from '../../../utils';
+import sortArray from '../../utils';
 import DisplayInventory from './InventoryItems/DisplayInventory';
 import ItemModalData from './InventoryItems/ItemModalData';
 import InventoryFilter from './InventoryItems/InventoryFilter';
