@@ -10,7 +10,7 @@ import InventoryStyle from './InventoryStyle';
 const INVENTORY = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
 const ITEMS_TO_DISPLAY = 8;
 
-const Inventory = () => {
+const InventoryPage = () => {
   const [inventoryCategory, setInventoryCategory] = useState('dragons');
   const [isError, setIsError] = useState(false);
   const [allInventory, setAllInventory] = useState(null);
@@ -80,4 +80,4 @@ const Inventory = () => {
   );
   
 }
-export default Inventory;
+export default InventoryPage;

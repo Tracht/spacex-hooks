@@ -3,7 +3,7 @@ import AppStyle from './AppStyle';
 import Homepage from './Homepage/Homepage';
 import { HomepageDiv } from './Homepage/HomepageStyle';
 import InventoryStyle from './Inventory/InventoryStyle';
-import Inventory from './Inventory/Inventory';
+import InventoryPage from './Inventory/InventoryPage';
 import { Link } from './StyledComponents/Link'
 
 const App = () => {
@@ -27,8 +27,8 @@ const App = () => {
         <AppStyle> 
           <InventoryStyle>
             <Link green href="#" onClick={toggleHomePage} data-cy='see-homepage-link'> Go to homepage </Link>
+            <InventoryPage />
           </InventoryStyle>
-          <Inventory />
         </AppStyle>
       );
     }
