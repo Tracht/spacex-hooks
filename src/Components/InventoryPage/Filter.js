@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../../StyledComponents/Button';
+import Button from '../StyledComponents/Button';
 
-const InventoryFilter = (props) => {
+const Filter = (props) => {
 
   const { INVENTORY, setInventoryCategory } = props
 
@@ -16,4 +16,4 @@ const InventoryFilter = (props) => {
   );
   
 }
-export default InventoryFilter;
+export default Filter;

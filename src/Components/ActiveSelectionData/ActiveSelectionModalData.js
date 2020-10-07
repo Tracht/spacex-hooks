@@ -1,11 +1,11 @@
 import React from 'react';
-import Capsules from '../ActiveSelectionData/Capsules';
-import Cores from '../ActiveSelectionData/Cores';
-import Dragons from '../ActiveSelectionData/Dragons';
-import Missions from '../ActiveSelectionData/Missions';
-import Ships from '../ActiveSelectionData/Ships';
+import Capsules from './Capsules';
+import Cores from './Cores';
+import Dragons from './Dragons';
+import Missions from './Missions';
+import Ships from './Ships';
 
-function ItemModalData(props) {
+function ActiveSelectionModalData(props) {
   
   const { inventoryCategory, activeSelection, keepOpenActiveSelection } = props
 
@@ -28,4 +28,4 @@ function ItemModalData(props) {
 
 }
 
-export default ItemModalData;
+export default ActiveSelectionModalData;

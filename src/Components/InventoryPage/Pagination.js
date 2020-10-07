@@ -1,7 +1,7 @@
 import React from 'react';
-import { LinkLarge } from '../../StyledComponents/Link';
+import { LinkLarge } from '../StyledComponents/Link';
 
-const InventoryPagination = (props) => {
+const Pagination = (props) => {
   const { inventoryCategory, pages, pageClick } = props
   return(
     <>
@@ -14,4 +14,4 @@ const InventoryPagination = (props) => {
     </>  
   ); 
 }
-export default InventoryPagination;
+export default Pagination;

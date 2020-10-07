@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import AppStyle from './AppStyle';
 import Homepage from './Homepage/Homepage';
 import { HomepageDiv } from './Homepage/HomepageStyle';
-import InventoryStyle from './Inventory/InventoryStyle';
-import InventoryPage from './Inventory/InventoryPage';
+import InventoryStyle from './InventoryPage/InventoryStyle';
+import InventoryPage from './InventoryPage/InventoryPage';
 import { Link } from './StyledComponents/Link'
 
 const App = () => {

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import sortArray from '../../Utils/utils';
-import DisplayInventory from './InventoryItems/DisplayInventory';
-import ItemModalData from './InventoryItems/ItemModalData';
-import InventoryFilter from './InventoryItems/InventoryFilter';
-import InventoryPagination from './InventoryItems/InventoryPagination';
+import DisplayAll from './DisplayAll';
+import ActiveSelectionModalData from '../ActiveSelectionData/ActiveSelectionModalData';
+import Filter from './Filter';
+import Pagination from './Pagination';
 import InventoryStyle from './InventoryStyle';
 
 const INVENTORY = ['capsules', 'cores', 'dragons', 'missions', 'ships'];
@@ -59,22 +59,22 @@ const InventoryPage = () => {
   return(
     <>
       <InventoryStyle>
-        <InventoryFilter INVENTORY={INVENTORY} setInventoryCategory={setInventoryCategory} /> 
-        <InventoryPagination inventoryCategory={inventoryCategory} pages={pages} pageClick={pageClick} />  
+        <Filter INVENTORY={INVENTORY} setInventoryCategory={setInventoryCategory} /> 
+        <Pagination inventoryCategory={inventoryCategory} pages={pages} pageClick={pageClick} />  
       </InventoryStyle>
 
-      <DisplayInventory 
+      <DisplayAll 
         data={someInventory} 
         isError={isError} 
         handleActiveSelection={handleActiveSelection} > 
-      </DisplayInventory>
+      </DisplayAll>
 
       {showModal && 
-        <ItemModalData 
+        <ActiveSelectionModalData 
           inventoryCategory={inventoryCategory}
           activeSelection={activeSelection}
           keepOpenActiveSelection={keepOpenActiveSelection} >
-        </ItemModalData> 
+        </ActiveSelectionModalData> 
       }
     </>  
   );

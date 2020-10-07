@@ -1,8 +1,8 @@
 import React from 'react';
-import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../../StyledComponents/Card';
-import { Link } from '../../StyledComponents/Link';
+import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../StyledComponents/Card';
+import { Link } from '../StyledComponents/Link';
 
-function DisplayInventory(props) {
+function InventoryDisplayAll(props) {
   const { data, isError, handleActiveSelection } = props
   return(
     <div>
@@ -43,4 +43,4 @@ function DisplayInventory(props) {
   );
 };
 
-export default DisplayInventory;
+export default InventoryDisplayAll;
