@@ -25,20 +25,6 @@ function ItemModalData(props) {
           return <Capsules activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>;
       }
     } else return null; 
-    
-  // if ( activeSelection ) {
-  //   if ( inventoryCategory === 'capsules' ) {
-  //     return <Capsules activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/> 
-  //   } else if ( inventoryCategory === 'cores' ) {
-  //     return <Cores activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
-  //   } else if ( inventoryCategory === 'dragons' ) {
-  //     return <Dragons activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
-  //   } else if ( inventoryCategory === 'missions' ) {
-  //     return <Missions activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
-  //   } else if ( inventoryCategory === 'ships' ) {
-  //     return <Ships activeSelection={activeSelection} keepOpenActiveSelection={keepOpenActiveSelection}/>
-  //   }
-  // } else return null; 
 
 }
 

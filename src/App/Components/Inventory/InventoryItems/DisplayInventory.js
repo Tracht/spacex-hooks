@@ -1,6 +1,6 @@
 import React from 'react';
-import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../../../StyledComponents/Card';
-import { Link } from '../../../StyledComponents/Link';
+import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../../StyledComponents/Card';
+import { Link } from '../../StyledComponents/Link';
 
 function ItemsAll(props) {
   const { data, isError, handleActiveSelection } = props

@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../../StyledComponents/Button';
-import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText } from '../../../StyledComponents/Modal';
+import Button from '../../StyledComponents/Button';
+import { ModalOverlay, ModalContent, Modal, ModalHeader, ModalTitle, ModalText } from '../../StyledComponents/Modal';
 
 function Capsules(props) {
   const { activeSelection, keepOpenActiveSelection } = props

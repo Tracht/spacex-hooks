@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../../../StyledComponents/Button';
-import { Link } from '../../../StyledComponents/Link';
-import {ModalOverlay, ModalContent, ModalHeader, Modal, ModalTitle, ModalText } from '../../../StyledComponents/Modal';
+import Button from '../../StyledComponents/Button';
+import { Link } from '../../StyledComponents/Link';
+import {ModalOverlay, ModalContent, ModalHeader, Modal, ModalTitle, ModalText } from '../../StyledComponents/Modal';
 
 function Missions(props) {
   const { activeSelection, keepOpenActiveSelection } = props

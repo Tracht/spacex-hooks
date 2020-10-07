@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkLarge } from '../../../StyledComponents/Link';
+import { LinkLarge } from '../../StyledComponents/Link';
 
 const InventoryPagination = (props) => {
   const { inventoryCategory, pages, pageClick } = props

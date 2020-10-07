@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../../StyledComponents/Button';
-import { Image } from '../../StyledComponents/Image';
+import Button from '../StyledComponents/Button';
+import { Image } from '../StyledComponents/Image';
 import { HomepageText } from './HomepageStyle';
 import QUOTES from './Quotes';
 
