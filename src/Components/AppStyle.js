@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import device from './StyledComponents/deviceSize';
+import device from '../Style/deviceSize';
 
 export default styled.div`
   min-height: 100vh;

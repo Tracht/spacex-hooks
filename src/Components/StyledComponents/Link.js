@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import device from './device';
+import device from '../../Style/device';
 
 // https://stackoverflow.com/questions/56047659/multiple-props-options-for-styled-components
 

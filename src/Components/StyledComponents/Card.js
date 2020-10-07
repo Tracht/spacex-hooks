@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import device from './device';
+import device from '../../Style/device';
 // https://lukebrown.io/post/how-to-create-a-spacing-system-with-styled-components/
  
 export const CardLink = styled.a`

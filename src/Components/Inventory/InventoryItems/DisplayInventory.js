@@ -2,7 +2,7 @@ import React from 'react';
 import { CardWrapper, CardTitle, CardText, CardsContainer, CardContentWrapper } from '../../StyledComponents/Card';
 import { Link } from '../../StyledComponents/Link';
 
-function ItemsAll(props) {
+function DisplayInventory(props) {
   const { data, isError, handleActiveSelection } = props
   return(
     <div>
@@ -43,4 +43,4 @@ function ItemsAll(props) {
   );
 };
 
-export default ItemsAll;
+export default DisplayInventory;
