@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default styled.div`
   padding-top: 30px;
@@ -8,4 +8,4 @@ export default styled.div`
   color: white;
   display: position;
   flex-direction: column;
-`
+`;

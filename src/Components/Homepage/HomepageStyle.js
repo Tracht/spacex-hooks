@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const HomepageDiv = styled.div`
   /* background-color: #282c34; */
@@ -10,14 +10,13 @@ export const HomepageDiv = styled.div`
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  
-`
+`;
 
 export const HomepageText = styled.p`
   font-size: 0.9em;
   padding-left: 10px;
   padding-right: 10px;
-  text-align: ${ props => props.left ? "left" : "center" };
+  text-align: ${props => (props.left ? "left" : "center")};
   color: white;
-  font-family: 'Open Sans', sans-serif;
-`
+  font-family: "Open Sans", sans-serif;
+`;

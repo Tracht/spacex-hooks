@@ -1,5 +1,5 @@
 // https://jsramblings.com/how-to-use-media-queries-with-styled-components/
-import deviceSize from './deviceSize'
+import deviceSize from "./deviceSize";
 
 const device = {
   mobileS: `(min-width: ${deviceSize.mobileS})`,
@@ -9,7 +9,7 @@ const device = {
   laptop: `(min-width: ${deviceSize.laptop})`,
   laptopL: `(min-width: ${deviceSize.laptopL})`,
   desktop: `(min-width: ${deviceSize.desktop})`,
-  desktopL: `(min-width: ${deviceSize.desktop})`
+  desktopL: `(min-width: ${deviceSize.desktop})`,
 };
 
 export default device;

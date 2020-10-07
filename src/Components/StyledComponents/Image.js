@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Image = styled.img`
  max-width: 60%;
@@ -9,4 +9,3 @@ export const Image = styled.img`
  margin-left: 70px; 
   
 `;
-
