@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e5b3e1ef-d30d-4554-850f-92bf59dbaabe/deploy-status)](https://app.netlify.com/sites/relaxed-kepler-537814/deploys)
 
-### App deployed [here](relaxed-kepler-537814.netlify.app)
+### App deployed [here](https://relaxed-kepler-537814.netlify.app/)
 
 ### Tasks Completed
 - [x] Part 1: A user can see a list of inventory before signing up to the platform
