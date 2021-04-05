@@ -32,13 +32,6 @@
 - From this point of view, high on the priority list is a filter enaling the user to filter inventory by category (capsules, cores, dragons, missions, ships). Likewise, the user would not want to be overwhelmed by the volume of inventory items, but rather see  manageable number of results. As such, I implemented pagination and only 8 items are displayed at a time. Again, to help the user navigate the inventory, I implemented a sort function, as this is not provided in the API calls. I also implemented a modal, so that the user can see both an initial summary about the item, and if they're interested in learning more, they can click 'learn more' to get full details. 
 - While important, I did not prioritise filtering the inventory by the item's name, but I would include this on the next iteration. 
 
-### Testing
-- In summary, I have implemented a mix of Cypress integration tests and Jest / Enzyme unit tests.
-- There seems to be quite a few approaches to testing React components which range from snapshot testing for styling to unit and integration tests. Here is a link to my [testing plan](https://github.com/Tracht/spacex-hooks/wiki/Testing) which outlines what I think are the important aspects to test. 
-- I experimented with Enzyme and Jest unit tests to check that some of the React Components rendered. I am not quite familiar with Enzyme/Jest unit testing of React Components, so this is something I will be working on in the next few days.  
-- I also implemented unit tests on a couple of functions, specifically to check that pagination and sortAtoZ functions worked correctly. I realise that there is a different approach to testing React Hooks, so I will be updating my unit test for pagination accordingly. 
-- I used Cypress for end-to-end testing, which initially I was unsure how to do with Styled Components. This [discussion](https://github.com/cypress-io/cypress/issues/1212) along with [Cypress documentation](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements) suggests using data-* attributes to provide context to your selectors and isolate them from CSS or JS changes. 
-
 ### To run the tests.
 - For Jest unit testing
   - In the terminal type: `yarn test` or `npm test`. Then type 'a' to run all tests.
@@ -48,7 +41,6 @@
 
 ### Oustanding tasks
 - Here is a link to my [project board](https://github.com/Tracht/spacex-hooks/projects/1).
-- I am a bit new to accessibility and SEO so I have added these to my to do list.
 - While my app is responsive across devices, I'd like to improve my implementation to reflect best practices. 
 
 ### TechStack 
